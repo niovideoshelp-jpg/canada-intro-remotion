@@ -235,7 +235,26 @@ for (let i = 0; i < N_DOTS; i++) {
   dots.push({x0: R(start[0]), y0: R(start[1]), x1: R(end[0]), y1: R(end[1]), r: R(2.6 + rand() * 1.8)});
 }
 
+// Fracao do comprimento total ocupada pelo MAIOR subcaminho. O Chrome reinicia o tracejado a cada
+// "M", entao um DrawSVG ate 100% termina cedo; desenhar ate essa fracao faz o maior contorno
+// (o continente) terminar exatamente no fim da animacao.
+const longestSubpathFrac = (d) => {
+  const lens = d
+    .split(/(?=M)/)
+    .filter(Boolean)
+    .map((sp) => {
+      const nums = sp.match(/-?\d+(\.\d+)?/g).map(Number);
+      let len = 0;
+      for (let i = 2; i + 1 < nums.length; i += 2) len += Math.hypot(nums[i] - nums[i - 2], nums[i + 1] - nums[i - 1]);
+      if (/Z/i.test(sp) && nums.length >= 4) len += Math.hypot(nums[0] - nums[nums.length - 2], nums[1] - nums[nums.length - 1]);
+      return len;
+    });
+  const total = lens.reduce((a, b) => a + b, 0);
+  return Math.round((Math.max(...lens) / total) * 10000) / 10000;
+};
+
 const ca = {
+  canadaDrawFrac: longestSubpathFrac(pathCA(CAN_LAND)),
   canada: pathCA(CAN_LAND),
   canadaRaw: pathCA(CAN),
   canadaCentroid: pathCA.centroid(CAN).map(R),
@@ -314,6 +333,7 @@ const nwPassage = {
 };
 
 const polar = {
+  russiaDrawFrac: longestSubpathFrac(pathP(RUS)),
   radius: POLAR_R,
   center: [W / 2, H / 2],
   sphere: pathP({type: 'Sphere'}),

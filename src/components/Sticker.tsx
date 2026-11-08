@@ -33,8 +33,7 @@ export const Depth: React.FC<{depth: number; px: number; py: number; zoom: numbe
 }) => (
   <AbsoluteFill
     style={{
-      transform: `translate3d(${px * depth}px, ${py * depth}px, 0px) scale(${1 + (zoom - 1) * depth}) rotate(0.03deg)`,
-      willChange: 'transform',
+      transform: `translate(${px * depth}px, ${py * depth}px) scale(${1 + (zoom - 1) * depth}) rotate(0.03deg)`,
       transformOrigin: '50% 50%',
     }}
   >

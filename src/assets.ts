@@ -13,5 +13,3 @@ export const ASSETS = {
   soldiers: 'img/soldiers.png',
 } as const;
 
-/** Legenda de local da cena "virtually untouched" (preenchida conforme a foto escolhida). */
-export const WILD_PLACE = {name: 'Northwest Territories', detail: ''};

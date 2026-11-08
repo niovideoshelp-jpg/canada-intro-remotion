@@ -25,7 +25,7 @@ const TERR_D = CA.provinces
 
 const SEEDS: Seed[] = [];
 for (let x = 440; x <= 1180; x += 120) {
-  for (let y = 90; y <= 640; y += 120) {
+  for (let y = 90; y <= 760; y += 120) {
     SEEDS.push({x, y, r: 140, delay: ((y - 90) / 550) * 0.5 + ((x - 440) / 740) * 0.12});
   }
 }
@@ -44,7 +44,7 @@ export const S03Arctic: React.FC = () => {
 
   const scope = useGsapTimeline<HTMLDivElement>(({timeline: tl, selector: q}) => {
     paint(tl, q, PAINT, SEEDS, L(T.forty - 0.08), 0.7);
-    wipeText(tl, q, '.s03-arctic', L(T.arctic1 - 0.08), 0.45);
+    wipeText(tl, q, '.s03-arctic', L(T.arctic1 - 0.3), 0.45);
     wipeText(tl, q, '.s03-num', L(T.forty - 0.12), 0.3);
   });
 

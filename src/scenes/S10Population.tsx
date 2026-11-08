@@ -7,13 +7,13 @@ import {AbsoluteFill} from 'remotion';
 import {Person} from '../components/Icons';
 import {ANTON} from '../fonts';
 import '../gsap';
-import {inOutCubic, linear, ramp} from '../lib/ease';
+import {inOutSine, ramp} from '../lib/ease';
 import {useGlobalSec, useLocal} from '../lib/scene';
 import {draw, wipeText} from '../lib/tl';
 import {C, H, W} from '../theme';
 import {W as T} from '../timing';
 
-const ICON_H = 66;
+const ICON_H = 60;
 const ICON_W = ICON_H * 0.4;
 const STEP = ICON_W + 6;
 const X0 = 520;
@@ -47,12 +47,12 @@ export const S10Population: React.FC = () => {
   });
 
   // empurrao lento de camera em direcao ao Canada no "massive, truly powerful military"
-  const s = 1 + 0.07 * ramp(t, 45.4, 48.2, linear) + 0.06 * ramp(t, 48.3, 50.9, inOutCubic);
+  const s = 1 + 0.11 * ramp(t, 45.4, 51.3, inOutSine); // uma rampa so: sem parada brusca no meio
   const can = ROWS[0];
   const canW = (Math.floor(can.millions / 10) + 1) * STEP;
 
   return (
-    <AbsoluteFill ref={scope} style={{transform: `scale(${s}) rotate(0.03deg)`, transformOrigin: '30% 34%', willChange: 'transform'}}>
+    <AbsoluteFill ref={scope} style={{transform: `scale(${s}) rotate(0.03deg)`, transformOrigin: '36% 36%'}}>
       {ROWS.map((r) => (
         <div
           key={r.key}

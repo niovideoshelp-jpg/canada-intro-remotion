@@ -20,7 +20,7 @@ const TICKS = Array.from({length: 11}, (_, i) => {
   const y = 250 + i * 50;
   const long = i % 5 === 0;
   return `M${TX - 46} ${y} H${TX - 46 - (long ? 34 : 18)}`;
-}).join(' ');
+});
 
 // cristais de gelo (6 bracos) desenhados a giz
 const crystal = (cx: number, cy: number, r: number) =>
@@ -40,7 +40,7 @@ export const S05Cold: React.FC = () => {
 
   const scope = useGsapTimeline<HTMLDivElement>(({timeline: tl, selector: q}) => {
     draw(tl, q, '.s05-outline', L(22.0), 0.55, 'power1.inOut');
-    draw(tl, q, '.s05-ticks', L(22.25), 0.4);
+    tl.fromTo(q('.s05-tick'), {drawSVG: '0% 0%'}, {drawSVG: '0% 100%', duration: 0.12, ease: 'none', stagger: 0.035}, L(22.2));
     wipeText(tl, q, '.s05-num', L(22.35), 0.3);
     draw(tl, q, '.s05-c1', L(T.cold - 0.05), 0.45);
     draw(tl, q, '.s05-c2', L(T.cold + 0.12), 0.45);
@@ -54,12 +54,16 @@ export const S05Cold: React.FC = () => {
   const push = 1 + 0.035 * ramp(t, 21.8, 24.3, linear);
 
   return (
-    <AbsoluteFill ref={scope} style={{transform: `scale(${push}) rotate(0.03deg)`, willChange: 'transform'}}>
+    <AbsoluteFill ref={scope} style={{transform: `scale(${push}) rotate(0.03deg)`}}>
       <svg width={W} height={H} style={{position: 'absolute', inset: 0}}>
         <circle cx={TX} cy={850} r={56} fill={C.red} />
         <rect x={TX - 15} y={level} width={30} height={Math.max(0, 850 - level)} fill={C.red} />
         <path className="s05-outline" d={OUTLINE} fill="none" stroke={C.ink} strokeWidth={5} strokeLinejoin="round" strokeLinecap="round" />
-        <path className="s05-ticks" d={TICKS} fill="none" stroke={C.ink} strokeOpacity={0.8} strokeWidth={3} strokeLinecap="round" />
+        <g fill="none" stroke={C.ink} strokeOpacity={0.8} strokeWidth={3} strokeLinecap="round">
+          {TICKS.map((d, i) => (
+            <path key={i} className="s05-tick" d={d} />
+          ))}
+        </g>
         <g fill="none" stroke={C.ink} strokeWidth={3} strokeLinecap="round" strokeOpacity={0.85}>
           <path className="s05-c1" d={crystal(1040, 300, 46)} />
           <path className="s05-c2" d={crystal(1580, 820, 38)} />

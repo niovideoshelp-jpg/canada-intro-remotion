@@ -13,7 +13,7 @@ import {MapSvg, usePx} from '../components/MapSvg';
 import {CA} from '../data/maps';
 import '../gsap';
 import {CamKey, camAt, toScreen} from '../lib/camera';
-import {inOutCubic, linear, outCubic, ramp} from '../lib/ease';
+import {inOutCubic, inOutSine, outCubic, ramp} from '../lib/ease';
 import {useGlobalSec, useLocal} from '../lib/scene';
 import {draw, wipeText} from '../lib/tl';
 import {C, H, W} from '../theme';
@@ -21,9 +21,9 @@ import {W as T} from '../timing';
 
 const KEYS: CamKey[] = [
   {t: 23.75, x: 960, y: 548, s: 0.9},
-  {t: 29.55, x: 960, y: 552, s: 0.93, ease: linear},
+  {t: 29.55, x: 960, y: 552, s: 0.93, ease: inOutSine},
   {t: 31.0, x: 985, y: 772, s: 1.42, ease: inOutCubic},
-  {t: 34.6, x: 990, y: 782, s: 1.5, ease: linear},
+  {t: 34.6, x: 990, y: 782, s: 1.5, ease: inOutSine},
 ];
 
 const Border: React.FC = () => {

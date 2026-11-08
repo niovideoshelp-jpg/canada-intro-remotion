@@ -3,12 +3,15 @@
 // exatamente no acontecimento visual.
 export type Cue = {at: number; file: string; vol: number; dur?: number; fadeIn?: number; fadeOut?: number};
 
-/** Sequencia de "ticks" para numeros contando (ritmo desacelerando como a contagem). */
-const ticks = (from: number, to: number, n: number, vol: number): Cue[] =>
+/**
+ * "Ticks" para numeros contando: um tick a cada passo IGUAL de valor, no instante em que o contador
+ * passa por ele. 'out' = contador outCubic (rapido -> lento), 'in' = contador inCubic (lento -> rapido).
+ */
+const ticks = (from: number, to: number, n: number, vol: number, curve: 'out' | 'in'): Cue[] =>
   Array.from({length: n}, (_, i) => {
-    const p = i / (n - 1);
-    const eased = 1 - Math.pow(1 - p, 1.6);
-    return {at: from + (to - from) * eased - 0.008, file: 'tick', vol, dur: 0.3};
+    const v = (i + 1) / n;
+    const u = curve === 'out' ? 1 - Math.cbrt(1 - v) : Math.cbrt(v);
+    return {at: from + (to - from) * u - 0.008, file: 'tick', vol, dur: 0.3};
   });
 
 export const SFX_CUES: Cue[] = [
@@ -28,15 +31,15 @@ export const SFX_CUES: Cue[] = [
 
   // 03 — "40% ... in the Arctic"
   {at: 13.37, file: 'marker_swipe', vol: 0.22, dur: 0.8},
-  ...ticks(13.56, 14.3, 7, 0.12),
+  ...ticks(13.52, 14.37, 7, 0.12, 'out'),
   {at: 14.36, file: 'stamp', vol: 0.32, dur: 0.6},
   {at: 15.27, file: 'ice_crack', vol: 0.22, dur: 1.4, fadeOut: 0.4},
 
   // 04 — "polar bears, moose, and a handful of brave souls"
-  {at: 15.66, file: 'paper_slide2', vol: 0.22, dur: 0.8},
-  {at: 15.6, file: 'wind_arctic', vol: 0.26, dur: 6.8, fadeIn: 0.9, fadeOut: 0.9},
+  {at: 15.91, file: 'paper_slide2', vol: 0.22, dur: 0.8},
+  {at: 15.85, file: 'wind_arctic', vol: 0.26, dur: 6.6, fadeIn: 0.9, fadeOut: 0.9},
   {at: 17.69, file: 'pop', vol: 0.34, dur: 0.4},
-  {at: 17.86, file: 'bear_growl', vol: 0.2, dur: 2.0, fadeOut: 0.5},
+  {at: 17.42, file: 'bear_growl', vol: 0.2, dur: 1.25, fadeOut: 0.4},
   {at: 18.73, file: 'pop2', vol: 0.36, dur: 0.4},
   {at: 20.24, file: 'pop', vol: 0.32, dur: 0.4},
   {at: 20.36, file: 'snow_steps', vol: 0.24, dur: 2.2, fadeOut: 0.6},
@@ -45,7 +48,7 @@ export const SFX_CUES: Cue[] = [
   {at: 21.81, file: 'paper_slide2', vol: 0.22, dur: 0.8},
   {at: 21.98, file: 'pen_scribble', vol: 0.16, dur: 0.7, fadeOut: 0.25},
   {at: 22.9, file: 'ice_crack', vol: 0.34, dur: 1.4, fadeOut: 0.4},
-  ...ticks(22.62, 23.55, 6, 0.11),
+  ...ticks(22.6, 23.6, 6, 0.11, 'in'),
   {at: 23.6, file: 'stamp', vol: 0.28, dur: 0.6},
 
   // 06 — "Squeeze into the South... 90%... narrow strip"
@@ -53,7 +56,7 @@ export const SFX_CUES: Cue[] = [
   {at: 26.05, file: 'whoosh_soft2', vol: 0.26, dur: 1.2},
   {at: 28.05, file: 'marker_swipe', vol: 0.22, dur: 0.8},
   {at: 30.15, file: 'whoosh_soft', vol: 0.22, dur: 1.0},
-  ...ticks(30.62, 31.4, 7, 0.12),
+  ...ticks(30.6, 31.45, 7, 0.12, 'out'),
   {at: 31.46, file: 'stamp', vol: 0.28, dur: 0.6},
   {at: 32.83, file: 'marker_swipe', vol: 0.24, dur: 0.8},
   {at: 33.32, file: 'pen_scribble', vol: 0.18, dur: 0.6, fadeOut: 0.2},
@@ -61,7 +64,6 @@ export const SFX_CUES: Cue[] = [
   // 07 — "virtually untouched"
   {at: 34.16, file: 'paper_slide2', vol: 0.22, dur: 0.8},
   {at: 34.2, file: 'wind_arctic', vol: 0.2, dur: 4.2, fadeIn: 0.8, fadeOut: 0.9},
-  {at: 35.34, file: 'pop', vol: 0.14, dur: 0.4},
 
   // 08 — "But that's where things get complicated."
   {at: 38.27, file: 'boom', vol: 0.26, dur: 2.6, fadeOut: 1.3},

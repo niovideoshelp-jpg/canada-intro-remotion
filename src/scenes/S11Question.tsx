@@ -12,7 +12,7 @@ import {Sticker} from '../components/Sticker';
 import {PLAYFAIR} from '../fonts';
 import '../gsap';
 import {CamKey, camAt} from '../lib/camera';
-import {inOutCubic, inOutSine, lerp, linear, ramp} from '../lib/ease';
+import {inOutCubic, inOutSine, lerp, ramp} from '../lib/ease';
 import {useGlobalSec, useLocal} from '../lib/scene';
 import {draw, marker, riseLine, slideIn, wipeText} from '../lib/tl';
 import {C, H, W} from '../theme';
@@ -22,7 +22,7 @@ import {ASSETS} from '../assets';
 const KEYS: CamKey[] = [
   {t: 50.85, x: 958, y: 606, s: 1.16, r: -6},
   {t: 53.1, x: 950, y: 646, s: 1.42, r: -12, ease: inOutCubic},
-  {t: 57.7, x: 946, y: 656, s: 1.55, r: -15, ease: linear},
+  {t: 57.7, x: 946, y: 656, s: 1.55, r: -15, ease: inOutSine},
 ];
 
 const titleStyle: React.CSSProperties = {
@@ -60,10 +60,12 @@ export const S11Question: React.FC = () => {
     draw(tl, q, '.s11-bp-a', L(T.canada2), 0.9, 'power1.inOut');
     draw(tl, q, '.s11-bp-b', L(T.canada2 + 0.25), 0.9, 'power1.inOut');
     draw(tl, q, '.s11-bp-c', L(T.defend + 0.1), 0.6);
+    draw(tl, q, '.s11-bp-c-t', L(T.defend + 0.68), 0.12, 'none');
   });
 
   const dim = 0.66 * ramp(t, T.can - 0.4, T.can + 0.35, inOutSine);
-  const shipDrift = lerp(0, -46, ramp(t, 54.6, 57.6, linear));
+  // comeca quando a entrada (GSAP, 53.32 + 1.4 s) termina, partindo do repouso
+  const shipDrift = lerp(0, -46, ramp(t, 54.72, 57.7, inOutSine));
 
   return (
     <AbsoluteFill ref={scope}>
@@ -77,11 +79,12 @@ export const S11Question: React.FC = () => {
         <g fill="none" stroke={C.ink} strokeOpacity={0.3} strokeWidth={2} strokeLinecap="round">
           <circle className="s11-bp-a" cx={760} cy={845} r={150} />
           <circle className="s11-bp-b" cx={1255} cy={830} r={95} />
-          <path className="s11-bp-c" d="M440 985 L1500 975 M440 971 L440 999 M1500 961 L1500 989" />
+          <path className="s11-bp-c" d="M440 985 L1500 975" />
+          <path className="s11-bp-c-t" d="M440 971 L440 999 M1500 961 L1500 989" />
         </g>
       </svg>
 
-      <div style={{position: 'absolute', left: 0, top: 0, width: W, height: H, transform: `translate3d(${shipDrift}px, 0px, 0px) rotate(0.03deg)`, willChange: 'transform'}}>
+      <div style={{position: 'absolute', left: 0, top: 0, width: W, height: H, transform: `translate(${shipDrift}px, 0px) rotate(0.03deg)`}}>
         <Sticker cls="s11-ship" src={ASSETS.dewolf} x={985} y={895} w={900} />
       </div>
 

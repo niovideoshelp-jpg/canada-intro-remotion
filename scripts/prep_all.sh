@@ -13,10 +13,14 @@ sticker people 1000 9 0.55
 sticker cf18 1300 10
 sticker dewolf 1500 11
 sticker soldiers 1100 10
+# camadas de parallax: o recorte do Canva vira a camada proxima; a placa distante e refeita com
+# preenchimento espelhado (scripts/fill_rows.py), que nao deixa "fantasma" quando as camadas se movem
 for k in arctic wild; do
-  if [ -f "$C/$k-fg_cutout.png" ] && [ -f "$C/$k-bg_plate.jpg" ]; then
-    "$PY" -I scripts/prep_images.py layer "$C/$k-fg_cutout.png" "$O/$k-fg.png" --width 2400
-    "$PY" -I scripts/prep_images.py plate "$C/$k-bg_plate.jpg" "$O/$k-bg.jpg" --width 2400
+  sat=0.72; [ "$k" = wild ] && sat=0.6
+  if [ -f "$C/$k-fg_cutout.png" ] && [ -f assets-src/photos/$k.jpg ]; then
+    "$PY" -I scripts/fill_rows.py assets-src/photos/$k.jpg "$C/$k-fg_cutout.png" assets-src/canva/$k-bg_rows.jpg 2400 16
+    "$PY" -I scripts/prep_images.py layer "$C/$k-fg_cutout.png" "$O/$k-fg.png" --width 2400 --sat $sat
+    "$PY" -I scripts/prep_images.py plate assets-src/canva/$k-bg_rows.jpg "$O/$k-bg.jpg" --width 2400 --sat $sat
   else
     echo "skip $k (sem camadas)"
   fi

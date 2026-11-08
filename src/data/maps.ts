@@ -15,6 +15,7 @@ export type Province = {
 export type Dot = {x0: number; y0: number; x1: number; y1: number; r: number};
 
 export type CanadaMap = {
+  canadaDrawFrac: number;
   canada: string;
   canadaRaw: string;
   canadaCentroid: Pt;
@@ -37,6 +38,7 @@ export type CanadaMap = {
 };
 
 export type PolarMap = {
+  russiaDrawFrac: number;
   radius: number;
   center: Pt;
   sphere: string;

@@ -11,7 +11,7 @@ import {PolarBase} from '../components/PolarBase';
 import {POLAR, polarCountry} from '../data/maps';
 import '../gsap';
 import {CamKey, camAt, toScreen} from '../lib/camera';
-import {inOutCubic, linear} from '../lib/ease';
+import {inOutCubic, inOutSine, linear} from '../lib/ease';
 import {useGlobalSec, useLocal} from '../lib/scene';
 import {draw, pop, wipeText} from '../lib/tl';
 import {C} from '../theme';
@@ -21,7 +21,7 @@ const KEYS: CamKey[] = [
   {t: 10.6, x: 944, y: 760, s: 1.6, r: 0},
   {t: 10.95, x: 944, y: 758, s: 1.58, r: 0, ease: linear},
   {t: 12.15, x: 960, y: 550, s: 1.05, r: -2, ease: inOutCubic},
-  {t: 13.5, x: 960, y: 548, s: 1.08, r: -4, ease: linear},
+  {t: 13.5, x: 960, y: 548, s: 1.08, r: -4, ease: inOutSine},
 ];
 
 const russia = polarCountry(POLAR.ids.russia)!;
@@ -39,7 +39,7 @@ export const S02Second: React.FC = () => {
   const scope = useGsapTimeline<HTMLDivElement>(({timeline: tl, selector: q}) => {
     pop(tl, q, '.s02-b2', L(T.second - 0.02), 0, 0.45);
     wipeText(tl, q, '.s02-l2', L(T.second + 0.12));
-    draw(tl, q, '.s02-rus', L(T.largest - 0.05), 0.8, 'power1.inOut');
+    draw(tl, q, '.s02-rus', L(T.largest - 0.05), 0.8, 'power1.inOut', POLAR.russiaDrawFrac);
     pop(tl, q, '.s02-b1', L(T.largest + 0.1), 0, 0.42);
     wipeText(tl, q, '.s02-l1', L(T.largest + 0.22));
   });

@@ -5,10 +5,11 @@ type TL = gsap.core.Timeline;
 type Q = gsap.utils.SelectorFunc;
 
 /** Traco que se desenha (DrawSVG). */
-export const draw = (tl: TL, q: Q, sel: string, at: number, dur = 0.6, ease = 'power2.inOut') => {
+export const draw = (tl: TL, q: Q, sel: string, at: number, dur = 0.6, ease = 'power2.inOut', toFrac = 1) => {
   const els = q(sel);
   if (!els.length) return;
-  tl.fromTo(els, {drawSVG: '0% 0%'}, {drawSVG: '0% 100%', duration: dur, ease}, at);
+  // toFrac < 1: caminhos com varios subcaminhos (o Chrome reinicia o tracejado em cada "M")
+  tl.fromTo(els, {drawSVG: '0% 0%'}, {drawSVG: `0% ${Math.min(100, toFrac * 100 + 0.6)}%`, duration: dur, ease}, at);
 };
 
 /** Pintura vermelha que se espalha (sementes do mask crescem). */
@@ -59,14 +60,15 @@ export const wipeText = (tl: TL, q: Q, sel: string, at: number, dur = 0.4) => {
   const els = q(sel);
   if (!els.length) return;
   // margens negativas: glifos largos (%, M) que passam da caixa nao sao cortados no fim
-  tl.fromTo(els, {clipPath: 'inset(-25% 100% -25% -8%)'}, {clipPath: 'inset(-25% -20% -25% -8%)', duration: dur, ease: 'power2.out'}, at);
+  tl.fromTo(els, {clipPath: 'inset(-25% 108% -25% -8%)'}, {clipPath: 'inset(-25% -20% -25% -8%)', duration: dur, ease: 'power2.out'}, at);
 };
 
 /** Linha de titulo que sobe por tras de uma mascara. */
 export const riseLine = (tl: TL, q: Q, sel: string, at: number, dur = 0.5) => {
   const els = q(sel);
   if (!els.length) return;
-  tl.fromTo(els, {yPercent: 105}, {yPercent: 0, duration: dur, ease: 'power3.out'}, at);
+  // rotation 0.03: texto em movimento sem encaixe de linha de base no pixel (anti-tremedeira)
+  tl.fromTo(els, {yPercent: 105, rotation: 0.03}, {yPercent: 0, rotation: 0.03, duration: dur, ease: 'power3.out'}, at);
 };
 
 /** Recorte/adesivo entrando com um unico overshoot (sem oscilar). */
