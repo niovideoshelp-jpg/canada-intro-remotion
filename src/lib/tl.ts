@@ -58,7 +58,8 @@ export const markerOut = (tl: TL, q: Q, cls: string, at: number) => {
 export const wipeText = (tl: TL, q: Q, sel: string, at: number, dur = 0.4) => {
   const els = q(sel);
   if (!els.length) return;
-  tl.fromTo(els, {clipPath: 'inset(-25% 100% -25% 0%)'}, {clipPath: 'inset(-25% 0% -25% 0%)', duration: dur, ease: 'power2.out'}, at);
+  // margens negativas: glifos largos (%, M) que passam da caixa nao sao cortados no fim
+  tl.fromTo(els, {clipPath: 'inset(-25% 100% -25% -8%)'}, {clipPath: 'inset(-25% -20% -25% -8%)', duration: dur, ease: 'power2.out'}, at);
 };
 
 /** Linha de titulo que sobe por tras de uma mascara. */

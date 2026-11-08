@@ -4,7 +4,12 @@
 
 | Uso no vídeo | Arquivo original | Autor | Licença |
 |---|---|---|---|
+| cf18 | [Royal Canadian Air Force CF-18 Hornets.jpg](https://commons.wikimedia.org/wiki/File:Royal_Canadian_Air_Force_CF-18_Hornets.jpg) | U.S. Air Force photo/Staff Sgt. Benjamin W. Stratton | Public domain |
+| dewolf | [HMCS Harry DeWolf Pulls into Naval Station Norfolk 1.jpg](https://commons.wikimedia.org/wiki/File:HMCS_Harry_DeWolf_Pulls_into_Naval_Station_Norfolk_1.jpg) | U.S. Navy photo by Mass Communication Specialist 1st Class Kris R. Lindstrom | Public domain |
+| moose | [Early season snow decorates a bull's antlers in Denali (85e8c25b-8652-454e-a08d-5f28933a93ae).jpg](https://commons.wikimedia.org/wiki/File:Early_season_snow_decorates_a_bull%27s_antlers_in_Denali_(85e8c25b-8652-454e-a08d-5f28933a93ae).jpg) | Jacob W. Frank | Public domain |
+| people | [Ice Station Pack Up (5931989778).jpg](https://commons.wikimedia.org/wiki/File:Ice_Station_Pack_Up_(5931989778).jpg) | NASA ICE | Public domain |
 | polar-bear | [Polar bear on shore (52790650706).jpg](https://commons.wikimedia.org/wiki/File:Polar_bear_on_shore_(52790650706).jpg) | USFWS Alaska (U.S. Fish and Wildlife Service) | Public domain |
+| soldiers | [U.S. Army and Canadian Soldiers during Guerrier Nordique 23 in tactical insertion with the 109th Airlift Wing, New York Air National Guard, on frozen oceanic Arctic ice near Cornwallis Island, Nunavut, Canada, March 15, 2023 - 1.jpg](https://commons.wikimedia.org/wiki/File:U.S._Army_and_Canadian_Soldiers_during_Guerrier_Nordique_23_in_tactical_insertion_with_the_109th_Airlift_Wing,_New_York_Air_National_Guard,_on_frozen_oceanic_Arctic_ice_near_Cornwallis_Island,_Nunavut,_Canada,_March_15,_2023_-_1.jpg) | The National Guard | CC BY 2.0 |
 
 ## Efeitos sonoros — [Freesound](https://freesound.org) (todos Creative Commons 0)
 

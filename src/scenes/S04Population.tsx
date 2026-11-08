@@ -33,15 +33,15 @@ export const S04Population: React.FC = () => {
       <Depth depth={0.3} px={px} py={py} zoom={zoom}>
         <Plate src={ASSETS.arcticBg} w={2280} />
       </Depth>
-      <Depth depth={0.7} px={px} py={py} zoom={zoom}>
+      <Depth depth={0.5} px={px} py={py} zoom={zoom}>
         <Plate src={ASSETS.arcticFg} w={2280} />
       </Depth>
       {/* escurece um pouco a foto para os adesivos e o vermelho se destacarem */}
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(10,10,10,0.18) 0%, rgba(10,10,10,0.05) 45%, rgba(10,10,10,0.38) 100%)'}} />
       <Depth depth={1} px={px} py={py} zoom={zoom}>
-        <Sticker cls="s04-bear" src={ASSETS.polarBear} x={560} y={640} w={500} />
-        <Sticker cls="s04-moose" src={ASSETS.moose} x={1140} y={600} w={500} />
-        <Sticker cls="s04-people" src={ASSETS.people} x={1545} y={690} w={360} />
+        <Sticker cls="s04-bear" src={ASSETS.polarBear} x={545} y={655} w={460} />
+        <Sticker cls="s04-moose" src={ASSETS.moose} x={1120} y={610} w={600} />
+        <Sticker cls="s04-people" src={ASSETS.people} x={1555} y={705} w={330} />
       </Depth>
       {/* a mesma textura do papel por cima, bem leve, para a foto pertencer ao filme */}
       <AbsoluteFill style={{mixBlendMode: 'soft-light', opacity: 0.5}}>

@@ -87,7 +87,7 @@ export const S06Squeeze: React.FC = () => {
 
   const value = 90 * ramp(t, T.ninety - 0.1, T.ninety + 0.75, outCubic);
   const [ux, uy] = toScreen(CA.labels.usa, cam);
-  const nx = 1480;
+  const nx = 1440;
   const ny = 285;
   // a seta sai do numero e aponta para a faixa (perto de Ottawa/Montreal)
   const target = toScreen([1150, 860], camAt(T.strip, KEYS)); // estatico: o traco nao muda de forma

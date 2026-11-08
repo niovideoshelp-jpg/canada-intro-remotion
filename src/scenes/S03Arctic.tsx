@@ -49,7 +49,7 @@ export const S03Arctic: React.FC = () => {
   });
 
   const value = 40 * ramp(t, T.forty, T.forty + 0.85, outCubic);
-  const [nx, ny] = toScreen([1255, 345], cam);
+  const [nx, ny] = toScreen([1205, 350], cam);
   const [ax, ay] = toScreen([800, 300], cam);
 
   return (

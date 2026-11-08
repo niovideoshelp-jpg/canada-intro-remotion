@@ -1,0 +1,10 @@
+{
+  "name": "dewolf",
+  "files": {"source": "assets-src/photos/dewolf.jpg", "cutout": "assets-src/canva/dewolf_cutout.png"},
+  "title": "HMCS Harry DeWolf Pulls into Naval Station Norfolk 1.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:HMCS_Harry_DeWolf_Pulls_into_Naval_Station_Norfolk_1.jpg",
+  "author": "U.S. Navy photo by Mass Communication Specialist 1st Class Kris R. Lindstrom",
+  "license": "Public domain",
+  "canva": {"source_media_id": "MAHaX9xIDXY", "cutout_media_id": "MAHaX8N7-1Q", "design_id": "DAHaX22jvcY"},
+  "notes": "HMCS Harry DeWolf (AOPS 430), 3/4 bow view, whole ship bow to stern, 9 Dec 2021 at the end of her North America circumnavigation via the Northwest Passage (original via DVIDS 6973652). No Commons photo of a DeWolf-class ship in ice showed the whole ship sharply, so this clean eye-level shot was used. Original 5832x3888 cropped to box 400,300,5832,3078 (stops at the waterline, leaves out the foreground netting) and downscaled to 3200x1637 = photos/dewolf.jpg. Canva workaround: the layer-separation step dropped the ship image (first two designs DAHaX7p1g04 / DAHaX7eEaoo held only the text '430', DAHaX1IvXMw was empty), so a helper copy was uploaded with the hull lettering ('430', 'HARRY DEWOLF') inpainted and the canvas padded to 5000x2600; Canva removed the background and the export came back at 4096x2130. Final cutout = original photos/dewolf.jpg pixels (real hull number kept) + Canva alpha scaled back to 3200x1637. Then local cleanup: a harbour tug behind the bow and a distant white boat or building at the stern were removed with polygon masks, and the sky-coloured halo on the edges and a strip of background under the stern crane were keyed out. The result is 3200x1637 RGBA, bow points left, with clean edges and masts and antennas intact."
+}

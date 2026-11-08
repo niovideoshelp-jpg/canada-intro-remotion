@@ -82,7 +82,7 @@ export const S11Question: React.FC = () => {
       </svg>
 
       <div style={{position: 'absolute', left: 0, top: 0, width: W, height: H, transform: `translate3d(${shipDrift}px, 0px, 0px) rotate(0.03deg)`, willChange: 'transform'}}>
-        <Sticker cls="s11-ship" src={ASSETS.dewolf} x={985} y={858} w={900} />
+        <Sticker cls="s11-ship" src={ASSETS.dewolf} x={985} y={895} w={900} />
       </div>
 
       <div style={{position: 'absolute', left: 0, right: 0, top: 150, display: 'flex', justifyContent: 'center'}}>

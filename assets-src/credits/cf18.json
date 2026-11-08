@@ -1,0 +1,10 @@
+{
+  "name": "cf18",
+  "files": {"source": "assets-src/photos/cf18.jpg", "cutout": "assets-src/canva/cf18_cutout.png"},
+  "title": "Royal Canadian Air Force CF-18 Hornets.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Royal_Canadian_Air_Force_CF-18_Hornets.jpg",
+  "author": "U.S. Air Force photo/Staff Sgt. Benjamin W. Stratton",
+  "license": "Public domain",
+  "canva": {"source_media_id": "MAHaXjB8QWI", "cutout_media_id": "MAHaXj0s93o", "design_id": "DAHaXrBWxi0"},
+  "notes": "RCAF CF-18B Hornet (tail 930) in side view over the Arctic Ocean, NORAD exercise Amalgam Dart 15-2, 29 May 2015 (original via DVIDS 1973354). Original 5387x3848 cropped to the upper aircraft only (box 380,1000,4920,2600; the second Hornet and the tanker hose were left out) and downscaled to 3200x1128 before upload. Canva background removal; exported transparent PNG 3200x1128 RGBA, one clean component, nose points right, canopy glass kept opaque."
+}

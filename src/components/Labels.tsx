@@ -101,7 +101,7 @@ export const BigNumber: React.FC<{
     ...[...raw].map((ch) => ({ch})),
     ...[...suffix].map((ch) => ({ch})),
   ];
-  const widthOf = (ch: string) => (/[0-9]/.test(ch) ? 0.5 : ch === '%' ? 0.66 : ch === '°' ? 0.36 : ch === '−' ? 0.42 : ch === 'M' ? 0.6 : 0.4);
+  const widthOf = (ch: string) => (/[0-9]/.test(ch) ? 0.5 : ch === '%' ? 0.8 : ch === '°' ? 0.36 : ch === '−' ? 0.42 : ch === 'M' ? 0.6 : 0.4);
   return (
     <div style={at(x, y, tx(anchor))}>
       <div className={cls} style={{display: 'flex', fontFamily: ANTON, fontSize: size, lineHeight: 1, color, textShadow: '0 4px 24px rgba(0,0,0,0.45)'}}>

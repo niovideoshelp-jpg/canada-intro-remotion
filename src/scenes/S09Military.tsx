@@ -50,7 +50,7 @@ export const S09Military: React.FC = () => {
         <svg width={W} height={H} style={{position: 'absolute', inset: 0, overflow: 'visible'}}>
           <g fill="none" stroke={C.ink} strokeOpacity={0.75} strokeWidth={2.5} strokeLinecap="round">
             <path className="s09-dim-jet" d="M300 520 L905 528 M300 506 L300 534 M905 514 L905 542" />
-            <path className="s09-dim-ship" d="M935 770 L1745 762 M935 756 L935 784 M1745 748 L1745 776" />
+            <path className="s09-dim-ship" d="M925 836 L1755 828 M925 822 L925 850 M1755 814 L1755 842" />
           </g>
         </svg>
         <Sticker cls="s09-jet" src={ASSETS.cf18} x={600} y={350} w={700} />

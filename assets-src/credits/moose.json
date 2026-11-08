@@ -1,0 +1,10 @@
+{
+  "name": "moose",
+  "files": {"source": "assets-src/photos/moose.jpg", "cutout": "assets-src/canva/moose_cutout.png"},
+  "title": "Early season snow decorates a bull's antlers in Denali (85e8c25b-8652-454e-a08d-5f28933a93ae).jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Early_season_snow_decorates_a_bull%27s_antlers_in_Denali_(85e8c25b-8652-454e-a08d-5f28933a93ae).jpg",
+  "author": "Jacob W. Frank",
+  "license": "Public domain",
+  "canva": {"source_media_id": "MAHaXrN56WQ", "cutout_media_id": "MAHaXsAEbrw", "design_id": "DAHaXmIvYCE"},
+  "notes": "U.S. National Park Service photo (Denali National Park, 30 Sep 2011, via NPGallery; Commons tag PD US NPS). Bull moose (Alces alces) with snow-covered palmate antlers, 3/4 view walking right; all four legs, hooves and both antlers complete. Original 4070x2713 downscaled to 3200x2133 (PIL Lanczos, JPEG q95) before upload. Background removed in Canva, then exported from the layered design as transparent lossless PNG 3200x2133 (pro). Subject bbox approx x354-2768 y217-1961 (2415x1745 px), single clean alpha blob."
+}

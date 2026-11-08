@@ -1,0 +1,10 @@
+{
+  "name": "people",
+  "files": {"source": "assets-src/photos/people.jpg", "cutout": "assets-src/canva/people_cutout.png"},
+  "title": "Ice Station Pack Up (5931989778).jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Ice_Station_Pack_Up_(5931989778).jpg",
+  "author": "NASA ICE",
+  "license": "Public domain",
+  "canva": {"source_media_id": "MAHaXjUs_SU", "cutout_media_id": "MAHaXnKk_3o", "design_id": "DAHaXjntat0"},
+  "notes": "NASA photo from the ICESCAPE sea-ice mission aboard USCGC Healy (Chukchi Sea, 6 Jul 2011; Commons tag PD NASA; description credit line 'NASA/Kathryn Hansen'). Two researchers in red float coats and dark overalls walking on sea ice, carrying a red gear bag and a coiled teal rope; full bodies complete incl. boots and the trailing rope loop. Caveats: US Arctic (not Canadian), only 2 people, medium-full shot with faces visible, partial mirrored 'COAST GUARD' lettering on the bag. Original 4271x2847 downscaled to 3200x2133 (PIL Lanczos, JPEG q95) before upload. Background removed in Canva, then exported from the layered design as transparent lossless PNG 3200x2133 (pro). Subject bbox approx x1709-2949 y485-1840 (1241x1356 px), single clean alpha blob."
+}
