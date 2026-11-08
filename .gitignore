@@ -1,0 +1,13 @@
+node_modules/
+out/
+.remotion/
+assets-src/photos/
+assets-src/canva/
+assets-src/sfx-raw/
+assets-src/tmp-*/
+*.log
+.DS_Store
+Thumbs.db
+
+# referencia de estilo (imagem de terceiros) fica so no PC
+reference/style-reference-vox.jpg

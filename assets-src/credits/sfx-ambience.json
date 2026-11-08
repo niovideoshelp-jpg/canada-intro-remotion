@@ -1,0 +1,92 @@
+[
+  {
+    "name": "wind_arctic",
+    "file": "public/sfx/wind_arctic.wav",
+    "freesound_id": "117136",
+    "title": "Wind__Artic__Cold.wav",
+    "author": "cobratronik",
+    "url": "https://freesound.org/people/cobratronik/sounds/117136/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "ice_crack",
+    "file": "public/sfx/ice_crack.wav",
+    "freesound_id": "342546",
+    "title": "Ice cracking",
+    "author": "timbreknight",
+    "url": "https://freesound.org/people/timbreknight/sounds/342546/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "jet_flyby",
+    "file": "public/sfx/jet_flyby.wav",
+    "freesound_id": "215447",
+    "title": "ps_fast_flighby_01.wav",
+    "author": "laribum",
+    "url": "https://freesound.org/people/laribum/sounds/215447/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "ship_horn",
+    "file": "public/sfx/ship_horn.wav",
+    "freesound_id": "573826",
+    "title": "Cruise ship horn harbour Saint John 191003.flac",
+    "author": "TRP",
+    "url": "https://freesound.org/people/TRP/sounds/573826/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "boom",
+    "file": "public/sfx/boom.wav",
+    "freesound_id": "255111",
+    "title": "Cinematic_Boom_Rhapsodize.wav",
+    "author": "rhapsodize",
+    "url": "https://freesound.org/people/rhapsodize/sounds/255111/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "riser",
+    "file": "public/sfx/riser.wav",
+    "freesound_id": "840719",
+    "title": "Simple Riser",
+    "author": "SoundEffectsForAll",
+    "url": "https://freesound.org/people/SoundEffectsForAll/sounds/840719/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "drone",
+    "file": "public/sfx/drone.wav",
+    "freesound_id": "826597",
+    "title": "Dark Tension Drone",
+    "author": "HarmonicMess",
+    "url": "https://freesound.org/people/HarmonicMess/sounds/826597/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "bear_growl",
+    "file": "public/sfx/bear_growl.wav",
+    "freesound_id": "763026",
+    "title": "Bear Angry Growl",
+    "author": "celldroid",
+    "url": "https://freesound.org/people/celldroid/sounds/763026/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "moose_call",
+    "file": "public/sfx/moose_call.wav",
+    "freesound_id": "486554",
+    "title": "Moose_Elk.mp3",
+    "author": "gleith",
+    "url": "https://freesound.org/people/gleith/sounds/486554/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "snow_steps",
+    "file": "public/sfx/snow_steps.wav",
+    "freesound_id": "613849",
+    "title": "Footsteps_Mountain_Boots_Snow_Walk_Mono.wav",
+    "author": "Nox_Sound",
+    "url": "https://freesound.org/people/Nox_Sound/sounds/613849/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  }
+]

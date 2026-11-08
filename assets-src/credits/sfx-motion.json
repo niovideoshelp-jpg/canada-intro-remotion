@@ -1,0 +1,110 @@
+[
+  {
+    "name": "whoosh_soft",
+    "file": "public/sfx/whoosh_soft.wav",
+    "freesound_id": "701104",
+    "title": "Whoosh stereo light (transition)",
+    "author": "xkeril",
+    "url": "https://freesound.org/people/xkeril/sounds/701104/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "whoosh_soft2",
+    "file": "public/sfx/whoosh_soft2.wav",
+    "freesound_id": "423798",
+    "title": "Little Whoosh 3",
+    "author": "ch_ase",
+    "url": "https://freesound.org/people/ch_ase/sounds/423798/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "whoosh_big",
+    "file": "public/sfx/whoosh_big.wav",
+    "freesound_id": "789075",
+    "title": "Deep Whoosh Speed Ramp",
+    "author": "oMzig",
+    "url": "https://freesound.org/people/oMzig/sounds/789075/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "paper_slide",
+    "file": "public/sfx/paper_slide.wav",
+    "freesound_id": "444431",
+    "title": "Sliding Envelope.wav",
+    "author": "MTJohnson",
+    "url": "https://freesound.org/people/MTJohnson/sounds/444431/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "paper_slide2",
+    "file": "public/sfx/paper_slide2.wav",
+    "freesound_id": "147285",
+    "title": "fh_Paper_Swipe_Surface2_Short_01.wav",
+    "author": "Frank1100",
+    "url": "https://freesound.org/people/Frank1100/sounds/147285/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "pop",
+    "file": "public/sfx/pop.wav",
+    "freesound_id": "202230",
+    "title": "Pop sound",
+    "author": "deraj",
+    "url": "https://freesound.org/people/deraj/sounds/202230/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "pop2",
+    "file": "public/sfx/pop2.wav",
+    "freesound_id": "653910",
+    "title": "soft-hit.wav",
+    "author": "Krokulator",
+    "url": "https://freesound.org/people/Krokulator/sounds/653910/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "marker_swipe",
+    "file": "public/sfx/marker_swipe.wav",
+    "freesound_id": "321137",
+    "title": "Sharpie marker drawing circle 01.wav",
+    "author": "elliott.klein",
+    "url": "https://freesound.org/people/elliott.klein/sounds/321137/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "pen_scribble",
+    "file": "public/sfx/pen_scribble.wav",
+    "freesound_id": "211247",
+    "title": "Scribble",
+    "author": "Tomoyo Ichijouji",
+    "url": "https://freesound.org/people/Tomoyo%20Ichijouji/sounds/211247/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "stamp",
+    "file": "public/sfx/stamp.wav",
+    "freesound_id": "470710",
+    "title": "traditional stamp.wav",
+    "author": "I.fekry",
+    "url": "https://freesound.org/people/I.fekry/sounds/470710/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "tick",
+    "file": "public/sfx/tick.wav",
+    "freesound_id": "534094",
+    "title": "clock-tick-01.flac",
+    "author": "pbimal",
+    "url": "https://freesound.org/people/pbimal/sounds/534094/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "name": "paper_unfold",
+    "file": "public/sfx/paper_unfold.wav",
+    "freesound_id": "447931",
+    "title": "Unfold a map",
+    "author": "Breviceps",
+    "url": "https://freesound.org/people/Breviceps/sounds/447931/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/"
+  }
+]

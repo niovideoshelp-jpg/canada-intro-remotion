@@ -1,0 +1,10 @@
+{
+  "name": "polar-bear",
+  "files": {"source": "assets-src/photos/polar-bear.jpg", "cutout": "assets-src/canva/polar-bear_cutout.png"},
+  "title": "Polar bear on shore (52790650706).jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Polar_bear_on_shore_(52790650706).jpg",
+  "author": "USFWS Alaska (U.S. Fish and Wildlife Service)",
+  "license": "Public domain",
+  "canva": {"cutout_media_id": "MAHaXeH_qaU", "design_id": "DAHaXTm9Gdg"},
+  "notes": "Background removed in Canva; exported as transparent PNG 2160x1440."
+}

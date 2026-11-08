@@ -1,0 +1,87 @@
+// Tempos da narracao (Intro.mp3, transcrita com Whisper large-v3-turbo, marcacao por palavra).
+// Todos os tempos em SEGUNDOS globais do video.
+import {FPS} from './theme';
+
+export const sec = (s: number) => Math.round(s * FPS);
+
+/** Palavras-chave da narracao usadas para sincronizar a animacao. */
+export const W = {
+  thisIs: 0.0,
+  canada: 0.66,
+  big1: 2.02,
+  big2: 4.1,
+  ridiculously: 5.52,
+  big3: 6.38,
+  okay: 7.88,
+  established: 9.56,
+  second: 11.44,
+  largest: 11.78,
+  planet: 12.74,
+  forty: 13.52,
+  territory: 14.42,
+  arctic1: 15.36,
+  population1: 16.42,
+  polar: 17.76,
+  bears: 18.14,
+  moose: 18.78,
+  handful: 20.3,
+  souls: 21.2,
+  cold: 22.96,
+  most: 23.88,
+  canadians: 24.22,
+  sensible: 25.54,
+  squeeze: 26.38,
+  south: 27.34,
+  along: 28.14,
+  usBorder: 28.54,
+  seriously: 29.68,
+  ninety: 30.7,
+  population2: 31.82,
+  narrow: 32.98,
+  strip: 33.38,
+  downThere: 33.7,
+  leaving: 34.4,
+  enormous: 35.56,
+  untouched: 37.18,
+  but: 38.28,
+  complicated: 39.9,
+  canadaHas: 41.18,
+  modern: 41.86,
+  wellEquipped: 42.52,
+  military1: 42.98,
+  short: 44.42,
+  personnel: 44.8,
+  itsPopulation: 45.68,
+  tooSmall: 47.0,
+  small: 47.3,
+  massive: 48.46,
+  powerful: 49.6,
+  military2: 50.18,
+  which: 51.02,
+  question: 52.22,
+  folks: 52.78,
+  can: 53.22,
+  canada2: 53.8,
+  defend: 54.22,
+  theArctic: 54.68,
+  onItsOwn: 55.36,
+  end: 55.86,
+} as const;
+
+/** Cenas (inicio/fim em segundos globais). Os cortes caem nas pausas naturais da fala. */
+export const SCENES = {
+  s01: [0, 10.85],
+  s02: [10.85, 13.2],
+  s03: [13.2, 15.8],
+  s04: [15.8, 21.95],
+  s05: [21.95, 24.0],
+  s06: [24.0, 34.3],
+  s07: [34.3, 38.1],
+  s08: [38.1, 41.0],
+  s09: [41.0, 45.55],
+  s10: [45.55, 51.1],
+  s11: [51.1, 57.5],
+} as const;
+
+/** Meia-duracao da transicao (cortina com borda vermelha), em frames. */
+export const WIPE_HALF = 7;
