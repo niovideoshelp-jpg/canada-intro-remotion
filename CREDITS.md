@@ -10,8 +10,15 @@
 | moose | [Early season snow decorates a bull's antlers in Denali (85e8c25b-8652-454e-a08d-5f28933a93ae).jpg](https://commons.wikimedia.org/wiki/File:Early_season_snow_decorates_a_bull%27s_antlers_in_Denali_(85e8c25b-8652-454e-a08d-5f28933a93ae).jpg) | Jacob W. Frank | Public domain |
 | people | [Ice Station Pack Up (5931989778).jpg](https://commons.wikimedia.org/wiki/File:Ice_Station_Pack_Up_(5931989778).jpg) | NASA/Kathryn Hansen (NASA ICE) | Public domain |
 | polar-bear | [Polar bear on shore (52790650706).jpg](https://commons.wikimedia.org/wiki/File:Polar_bear_on_shore_(52790650706).jpg) | USFWS Alaska (U.S. Fish and Wildlife Service) | Public domain |
-| soldiers | [U.S. Army and Canadian Soldiers during Guerrier Nordique 23 in tactical insertion with the 109th Airlift Wing, New York Air National Guard, on frozen oceanic Arctic ice near Cornwallis Island, Nunavut, Canada, March 15, 2023 - 1.jpg](https://commons.wikimedia.org/wiki/File:U.S._Army_and_Canadian_Soldiers_during_Guerrier_Nordique_23_in_tactical_insertion_with_the_109th_Airlift_Wing,_New_York_Air_National_Guard,_on_frozen_oceanic_Arctic_ice_near_Cornwallis_Island,_Nunavut,_Canada,_March_15,_2023_-_1.jpg) | The National Guard | CC BY 2.0 |
-| wild | [Marvel Lake in Mount Assiniboine Provincial Park.jpg](https://commons.wikimedia.org/wiki/File:Marvel_Lake_in_Mount_Assiniboine_Provincial_Park.jpg) | Edna Winti | CC BY 2.0 |
+| soldiers | [U.S. Army and Canadian Soldiers during Guerrier Nordique 23 in tactical insertion with the 109th Airlift Wing, New York Air National Guard, on frozen oceanic Arctic ice near Cornwallis Island, Nunavut, Canada, March 15, 2023 - 1.jpg](https://commons.wikimedia.org/wiki/File:U.S._Army_and_Canadian_Soldiers_during_Guerrier_Nordique_23_in_tactical_insertion_with_the_109th_Airlift_Wing,_New_York_Air_National_Guard,_on_frozen_oceanic_Arctic_ice_near_Cornwallis_Island,_Nunavut,_Canada,_March_15,_2023_-_1.jpg) | The National Guard (Capt. Mikel Arcovitch) | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) (recortada, neve sob a bota removida, cor tratada) |
+| wild | [Marvel Lake in Mount Assiniboine Provincial Park.jpg](https://commons.wikimedia.org/wiki/File:Marvel_Lake_in_Mount_Assiniboine_Provincial_Park.jpg) | Edna Winti | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) (recortada em camadas de parallax, fundo retocado, cor tratada) |
+
+**Para a descrição do YouTube:** as fotos CC BY exigem crédito ao autor, link da licença e aviso de que foram alteradas. Cole:
+
+```
+Photo: The National Guard (Capt. Mikel Arcovitch), CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/), via Wikimedia Commons. Cropped, cut out and color-graded.
+Photo: "Marvel Lake in Mount Assiniboine Provincial Park" by Edna Winti, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/), via Wikimedia Commons. Cut into parallax layers, retouched and color-graded.
+```
 
 ## Efeitos sonoros — [Freesound](https://freesound.org) (todos Creative Commons 0)
 

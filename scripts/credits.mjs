@@ -21,7 +21,19 @@ let md = `# Créditos
 |---|---|---|---|
 `;
 for (const p of photos.sort((a, b) => a.name.localeCompare(b.name))) {
-  md += `| ${esc(p.name)} | [${esc(p.title)}](${p.source_page}) | ${esc(p.author)} | ${esc(p.license)} |\n`;
+  const lic = p.license_url ? `[${esc(p.license)}](${p.license_url})` : esc(p.license);
+  const mod = p.modified ? ` (${esc(p.modified)})` : '';
+  md += `| ${esc(p.name)} | [${esc(p.title)}](${p.source_page}) | ${esc(p.author)} | ${lic}${mod} |\n`;
+}
+const ccby = photos.filter((p) => p.credit_line);
+if (ccby.length) {
+  md += `
+**Para a descrição do YouTube:** as fotos CC BY exigem crédito ao autor, link da licença e aviso de que foram alteradas. Cole:
+
+\`\`\`
+${ccby.map((p) => p.credit_line).join('\n')}
+\`\`\`
+`;
 }
 md += `
 ## Efeitos sonoros — [Freesound](https://freesound.org) (todos Creative Commons 0)

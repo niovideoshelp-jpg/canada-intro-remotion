@@ -1,10 +1,20 @@
 {
   "name": "soldiers",
-  "files": {"source": "assets-src/photos/soldiers.jpg", "cutout": "assets-src/canva/soldiers_cutout.png"},
+  "files": {
+    "source": "assets-src/photos/soldiers.jpg",
+    "cutout": "assets-src/canva/soldiers_cutout.png"
+  },
   "title": "U.S. Army and Canadian Soldiers during Guerrier Nordique 23 in tactical insertion with the 109th Airlift Wing, New York Air National Guard, on frozen oceanic Arctic ice near Cornwallis Island, Nunavut, Canada, March 15, 2023 - 1.jpg",
   "source_page": "https://commons.wikimedia.org/wiki/File:U.S._Army_and_Canadian_Soldiers_during_Guerrier_Nordique_23_in_tactical_insertion_with_the_109th_Airlift_Wing,_New_York_Air_National_Guard,_on_frozen_oceanic_Arctic_ice_near_Cornwallis_Island,_Nunavut,_Canada,_March_15,_2023_-_1.jpg",
-  "author": "The National Guard",
+  "author": "The National Guard (Capt. Mikel Arcovitch)",
   "license": "CC BY 2.0",
-  "canva": {"source_media_id": "MAHaX2066wE", "cutout_media_id": "MAHaXyr6fNM", "design_id": "DAHaXyRtdnE"},
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "modified": "recortada, neve sob a bota removida, cor tratada",
+  "credit_line": "Photo: The National Guard (Capt. Mikel Arcovitch), CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/), via Wikimedia Commons. Cropped, cut out and color-graded.",
+  "canva": {
+    "source_media_id": "MAHaX2066wE",
+    "cutout_media_id": "MAHaXyr6fNM",
+    "design_id": "DAHaXyRtdnE"
+  },
   "notes": "ATTRIBUTION REQUIRED (CC BY 2.0): 'Photo: The National Guard (Capt. Mikel Arcovitch), CC BY 2.0, via Wikimedia Commons' (original on Flickr 33252741@N08/52759231727). Exercise Guerrier Nordique 23 on the frozen sea ice near Cornwallis Island, Nunavut, 15 March 2023. Shows three soldiers, seen from behind, walking away across the ice in Arctic over-whites with large white rucksacks and rifles. Full bodies are visible. They wear Canadian Arctic CADPAT over-whites and CADPAT webbing; Commons says the Canadian soldiers came mainly from 35 Canadian Brigade Group, but the caption names no individual's nationality ('U.S. Army and Canadian Soldiers'). Original 7360x4912 cropped to box 4618,1700,6780,3520 (2162x1820, no downscale needed), placed between the next soldiers in the file so nobody is cut by the frame. The helper upload was the crop padded to 3400x2900 with edge-replicated pixels, because Canva's layer step drops large subjects. The export was cropped back to the source frame (no alpha in the padding, pixel-registered to the source). Canva output used as is: 2162x1820 RGBA, two components (left soldier, plus the middle and right soldiers joined by a rifle), clean edges, a little snow on the right soldier's boot sole. The photo is dark and blue (low Arctic sun), so a grade may help."
 }
