@@ -1,7 +1,7 @@
 // 34.30–38.10  "leaving the rest of this enormous country virtually untouched."
 // Natureza intocada em camadas (placa distante + primeiro plano recortado no Canva):
 // a camera avanca devagar e "sobe" — parallax entre as camadas da sensacao de profundidade.
-// Sem legenda de lugar: a foto (Peyto Lake, Rochosas) fala sozinha — texto so quando necessario.
+// Sem legenda de lugar: a foto (Marvel Lake, Mount Assiniboine Provincial Park) fala sozinha.
 import React from 'react';
 import {AbsoluteFill, Img, staticFile} from 'remotion';
 import {Depth, Plate} from '../components/Sticker';

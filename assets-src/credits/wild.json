@@ -1,0 +1,18 @@
+{
+  "name": "wild",
+  "files": {
+    "source": "assets-src/photos/wild.jpg",
+    "fg": "assets-src/canva/wild-fg_cutout.png",
+    "bg": "assets-src/canva/wild-bg_plate.jpg"
+  },
+  "title": "Marvel Lake in Mount Assiniboine Provincial Park.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Marvel_Lake_in_Mount_Assiniboine_Provincial_Park.jpg",
+  "author": "Edna Winti",
+  "license": "CC BY 2.0",
+  "canva": {
+    "source_media_id": "MAHaX0c8X8E",
+    "cutout_media_id": "MAHaX3zlkFg",
+    "design_id": "DAHaXw3W-_k"
+  },
+  "notes": "Marvel Lake, Mount Assiniboine Provincial Park (BC Rockies), seen from a snow-dusted scree ridge on 11 Sep 2012 (Flickr original https://www.flickr.com/photos/ednawinti/7987448805/). Untouched back-country: lake, conifer forest, snowy peaks, cloudy sky; no roads, buildings, trails or people. Original 4000x3000 downscaled to 3200x2400 (PIL Lanczos, JPEG q95) = photos/wild.jpg. CANVA: the whole photo (upload MAHaX-pmQHY, cutout MAHaXx-GY7A) came back as 'everything except the sky' (far mountains kept), and a first lower-band crop (MAHaXyy3SHA) was refused ('No clear foreground subject'). So a helper crop of photos/wild.jpg, box x600-3200 y1250-2400 (2600x1150), was uploaded as MAHaX0c8X8E. Canva kept only the near snow-dusted rock dome: one clean alpha piece. The lake, valley forest, left cliff, the trees behind the crest, the mountains and the sky were all removed. Exported from design DAHaXw3W-_k as a transparent lossless PNG at 2600x1150 (pro), then put back at offset (600,1250) on a 3200x2400 canvas with the ORIGINAL photo pixels and Canva's alpha. LOCAL FIXES (assets-src/tmp-wild/assemble_fg.py, refine_edge.py, fill_notches.py): (1) the dome continues 327 px left of the crop border (x273-599, bottom rows y2249-2399). That edge was extrapolated from Canva's own edge (quadratic fit, rms 1.2 px) and snapped to the snow-vs-trees boundary in the photo; it joins Canva's edge at x600 with no step. (2) In a 30 px band along the crest, a thin dark/green fringe of the trees behind the crest was cleared; narrow notches were then refilled with Canva's alpha. Result: fg = 3200x2400 RGBA, one blob, bbox x273-3199 y1654-2399 (2927x746 px), clean edges. BG PLATE 2400x1800: scripts/make_plate.py was run first (kept as tmp-wild/wild-bg_plate_makeplate_v1.jpg). Its dilated TELEA ring showed a blurry halo around the dome at rest, so the delivered plate uses tmp-wild/refine_plate.py. The hole is the fg alpha grown by only 2 px. It is filled by mirroring the real texture across the nearest edge up to 70-140 px deep, then fades into a smooth fill. Outside the hole the plate is the untouched photo, except one soft 9 px white speck on the lake (unidentifiable bird/floe), which was retouched out. Checks at plate scale: aligned plate+fg vs photo, mean abs diff in a 30 px ring = 3.1/255 (no halo). fg shifted 40 px left/right and 30 px up shows forest, lake and snow continuing naturally, with no ghost. USE: scale fg 3200->2400 (same 4:3 aspect); fg bbox at plate scale x205-2399 y1240-1799. The fg touches the bottom and right frame edges, so overscan the fg (>=1.04x) or keep the near layer moving so those edges stay covered. The left cliff, lake and right-hand trees are in the bg plate (2-layer plate). NOTE: canva/wild-bg_rows.jpg (created 20:55) was NOT written by this agent and was left untouched. First photo tried: 'Lac Peyto - Panoramique (4163380668).jpg' (CC BY 2.0, dyonis). Its Canva cut (upload MAHaX-JfLAg -> MAHaX4Xt-mU, design DAHaXx7PV6s) kept lake patches and a floating chunk of the far slope, so it was rejected."
+}
