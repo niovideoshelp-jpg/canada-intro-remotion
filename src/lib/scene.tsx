@@ -1,7 +1,7 @@
 import React, {createContext, useContext} from 'react';
 import {AbsoluteFill, Sequence, useCurrentFrame} from 'remotion';
 import {FPS, H, W} from '../theme';
-import {WIPE_HALF, sec} from '../timing';
+import {WIPE_HALF, sec} from './time';
 import {inOutCubic, ramp} from './ease';
 
 type SceneInfo = {fromFrame: number};

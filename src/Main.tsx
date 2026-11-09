@@ -16,6 +16,8 @@ import {S08Complicated} from './scenes/S08Complicated';
 import {S09Military} from './scenes/S09Military';
 import {S10Population} from './scenes/S10Population';
 import {S11Question} from './scenes/S11Question';
+import {cutsOf} from './lib/time';
+import {SFX_CUES} from './sfx';
 import {SoundDesign} from './SoundDesign';
 import {SCENES} from './timing';
 
@@ -55,9 +57,9 @@ export const Main: React.FC = () => (
     <Scene range={SCENES.s11} last name="11 The question">
       <S11Question />
     </Scene>
-    <WipeEdges />
+    <WipeEdges cuts={cutsOf(SCENES)} />
     <ScreenFX />
     <Audio src={staticFile('audio/intro.mp3')} />
-    <SoundDesign />
+    <SoundDesign cues={SFX_CUES} />
   </AbsoluteFill>
 );

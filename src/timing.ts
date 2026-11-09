@@ -1,8 +1,6 @@
 // Tempos da narracao (Intro.mp3, transcrita com Whisper large-v3-turbo, marcacao por palavra).
 // Todos os tempos em SEGUNDOS globais do video.
-import {FPS} from './theme';
-
-export const sec = (s: number) => Math.round(s * FPS);
+export {WIPE_HALF, sec} from './lib/time';
 
 /** Palavras-chave da narracao usadas para sincronizar a animacao. */
 export const W = {
@@ -82,6 +80,3 @@ export const SCENES = {
   s10: [45.55, 51.1],
   s11: [51.1, 57.5],
 } as const;
-
-/** Meia-duracao da transicao (cortina com borda vermelha), em frames. */
-export const WIPE_HALF = 7;

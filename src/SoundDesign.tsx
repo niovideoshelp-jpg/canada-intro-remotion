@@ -3,12 +3,12 @@
 import {Audio} from '@remotion/media';
 import React from 'react';
 import {Sequence, staticFile} from 'remotion';
+import type {Cue} from './lib/cues';
 import {FPS} from './theme';
-import {SFX_CUES} from './sfx';
 
-export const SoundDesign: React.FC = () => (
+export const SoundDesign: React.FC<{cues: readonly Cue[]}> = ({cues}) => (
   <>
-    {SFX_CUES.map((c, i) => (
+    {cues.map((c, i) => (
       <Sequence key={i} from={Math.round(c.at * FPS)} durationInFrames={Math.round((c.dur ?? 6) * FPS)} name={`sfx ${c.file}`} layout="none">
         <Audio
           src={staticFile(`sfx/${c.file}.wav`)}

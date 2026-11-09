@@ -1,0 +1,60 @@
+   0.00    8.24  gap 0.62  To see what's approaching from the north, Canada relies on the North Warning System, a network of 47 radar sites stretching from Yukon to Labrador.
+   8.86   13.08  gap 0.54  The problem is that it was built between 1986 and 1992.
+  13.62   19.66  gap 0.48  It's still operating, but more advanced cruise missiles and hypersonic weapons are already testing its limits.
+  20.14   22.26  gap 0.18  Surveillance also comes from space.
+  22.44   29.34  gap 0.22  The three satellites in the Radarsat Constellation mission can capture images during the day, at night, and through cloud cover.
+  29.56   32.92  gap 0.32  Some areas of the far north can get up to four passes a day.
+  33.24   42.08  gap 0.48  At sea, those images are cross -referenced with data from AIS, the Vessel Identification System, to help identify ships and track maritime traffic.
+  42.56   47.54  gap 0.26  It's a useful tool, though it doesn't provide continuous coverage of every point in the country.
+  47.80   51.26  gap 0.22  Getting all these systems to work together is another challenge.
+  51.48   59.96  gap 0.46  A 2022 federal audit found gaps in maritime traffic information, problems sharing data between agencies and delays in replacing equipment.
+  60.42   66.72  gap 0.32  The report showed that surveillance depended as much on getting information to the people who needed it as it did on the sensors themselves.
+  67.04   73.00  gap 0.36  One of the projects meant to improve detection is an over -the -horizon radar system using Australian technology.
+  73.36   79.54  gap 0.30  Canada moved forward with agreements involving Australia and BAE Systems Australia in June 2026.
+  79.84   88.66  gap 0.32  The system uses refraction in the ionosphere to bend radar signals, allowing it to see beyond the range of conventional radar and provide more time to react.
+  88.98   93.22  gap 0.44  But its initial capability isn't expected until December 2029.
+  93.66   96.46  gap 0.52  For now, it's an improvement still in the works.
+  96.98   99.84  gap 0.72  Once a threat is detected, someone has to respond.
+ 100.56  104.32  gap 0.12  Canada's CF -8s are still doing that job through NORAD alongside U .S.
+ 104.44  107.36  gap 0.40  forces as the country prepares to replace its fighter fleet.
+ 107.76  113.62  gap 0.26  Canada received its first two F -35s in October 2026 at Luke Air Force Base in Arizona.
+ 113.88  119.14  gap 0.38  But by the end of that month, the government was still reviewing its plan to buy 88 aircraft.
+ 119.52  124.32  gap 0.20  The plan calls for the first eight F -35s to be based in the United States for training.
+ 124.52  132.60  gap 0.30  The first aircraft are due to arrive in Canada in 2028, with initial operational capability expected between 2029 and 2030.
+ 132.90  137.82  gap 0.34  So those 88 fighters aren't a fleet Canada can call on to defend the Arctic today.
+ 138.16  140.52  gap 0.00  And the transition has other problems.
+ 140.52  146.70  gap 0.22  A 2025 audit found delays in facilities and shortages of qualified pilots and engineering personnel.
+ 146.92  151.40  gap 0.48  When the aircraft arrive, they need trained people and bases that can keep them flying.
+ 151.88  159.82  gap 0.48  At sea, all six Harry DeWolf -class patrol ships have been delivered, and the program reached full operational capability in October 2026.
+ 160.30  165.86  gap 0.00  They've been operating in the Arctic between June and October, expanding Canada's presence during the navigation season.
+ 165.86  177.14  gap 0.20  At 103 meters long, with a stated range of 6 ,800 nautical miles, they can carry cargo, vehicles, and smaller boats, as well as accommodate helicopters depending on the mission.
+ 177.34  182.04  gap 0.18  That allows them to support teams ashore, conduct patrols, and take part in rescues.
+ 182.22  184.26  gap 0.22  But these ships have limits too.
+ 184.48  190.66  gap 0.42  They're rated to operate in up to 1 meter of first -year ice, which doesn't mean they can get through any ice conditions.
+ 191.08  194.66  gap 0.14  Their 25mm armament fits their patrol and enforcement role.
+ 194.80  203.02  gap 0.26  In my view, they do a lot to strengthen Canada's presence, but their combat power is limited if they're facing a naval force equipped for high -intensity warfare.
+ 203.28  210.50  gap 0.38  The Coast Guard complements that work with icebreakers, search and rescue, navigation support, and information about conditions at sea.
+ 210.88  217.30  gap 0.46  Although responsibility for it shifted to the Defense Department in September 2025, it remains a civilian organization.
+ 217.76  221.24  gap 0.74  That administrative change didn't turn its ships into combat vessels.
+ 221.98  224.30  gap 0.38  Underwater, the situation is more difficult.
+ 224.68  233.36  gap 0.38  Canada has four Victoria -class submarines, but in July 2026, Prime Minister Mark Carney himself said only one was able to go to sea.
+ 233.74  238.72  gap 0.42  Low availability aside, the class also has limitations when it comes to operating under ice.
+ 239.14  247.16  gap 0.22  Using these submarines in the northern approaches during the open water season isn't the same as being able to carry out extended patrols beneath the ice of the high Arctic.
+ 247.38  253.32  gap 0.56  The replacement program calls for up to 12 conventionally -powered submarines capable of operating under ice.
+ 253.88  263.82  gap 0.58  In July 2026, Germany's TKMS was selected as the preferred supplier for negotiations on the project, with the first four submarines expected in 2034.
+ 264.40  270.10  gap 0.20  That's progress on the planning side, but the Navy still has to get through the coming years with the equipment it has.
+ 270.30  281.88  gap 0.42  In maritime patrol aviation, work is also underway to replace the CP -140 Aurora with the P -8A Poseidon, which is designed for surveillance and operations against submarines and surface ships.
+ 282.30  288.12  gap 0.40  On land, Canada's permanent presence includes the station at alert, along with command and support facilities.
+ 288.52  295.68  gap 0.22  There are also the Canadian Rangers, reservists who live in remote communities and help with patrols, observation, and search and rescue.
+ 295.90  302.70  gap 0.20  The 2025 -26 results report lists more than 1 ,500 Rangers in the Arctic and the North.
+ 302.90  309.80  gap 0.78  Their knowledge of the terrain helps other units operate in a region where just getting there and moving around takes considerable preparation.
+ 310.58  317.74  gap 0.18  Operation Nanook exercises train forces for situations such as casualty evacuations, aircraft crashes and ice reconnaissance.
+ 317.92  324.14  gap 0.44  The difficulty of sustaining these operations is clear at Nanicevic, the naval facility on northern Baffin Island.
+ 324.58  330.00  gap 0.48  In May 2026, the Defense Department announced that it was taking the site out of operational use.
+ 330.48  337.78  gap 0.16  Its very short seasonal operating window, construction problems, delays and expensive dock repairs had reduced its usefulness.
+ 337.94  346.40  gap 0.52  The government said the range of the Harry DeWolf -class ships, together with other refueling options, would allow operations to continue without any loss of capability.
+ 346.92  351.82  gap 0.60  Even so, the case shows how an Arctic construction project can fall short of expectations.
+ 352.42  362.04  gap 0.00  Canada is also planning a network of support hubs in the north, with investment projected at 2 .67 billion Canadian dollars between 2024 and 2044.
+ 362.04  373.44  gap 0.16  In March 2026, the government also announced a package worth 32 billion Canadian dollars for NORAD -related infrastructure in Yellowknife, Inuvik, Iqaluit, and Goose Bay.
+ 373.60  378.18  gap 0.28  That includes runways, hangars, fuel facilities, and ammunition storage.
+ 378.46  388.98  gap 0.00  As those projects are completed, the goal is to bring forces into the region and support longer missions, with maintenance, storage, and medical care closer to where personnel need to operate.

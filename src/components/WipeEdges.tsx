@@ -1,17 +1,13 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {wipeEdge} from '../lib/scene';
+import {WIPE_HALF, sec} from '../lib/time';
 import {C, H, W} from '../theme';
-import {SCENES, WIPE_HALF, sec} from '../timing';
 
-const CUTS = Object.values(SCENES)
-  .slice(1)
-  .map(([s]) => sec(s));
-
-/** A borda vermelha da cortina de transicao (mesma linguagem do marcador vermelho). */
-export const WipeEdges: React.FC = () => {
+/** A borda vermelha da cortina de transicao (mesma linguagem do marcador vermelho). `cuts` em segundos. */
+export const WipeEdges: React.FC<{cuts: readonly number[]}> = ({cuts}) => {
   const g = useCurrentFrame();
-  const active = CUTS.find((c) => g >= c - WIPE_HALF && g < c + WIPE_HALF);
+  const active = cuts.map(sec).find((c) => g >= c - WIPE_HALF && g < c + WIPE_HALF);
   if (active === undefined) return null;
   const e = wipeEdge(g, active);
   return (

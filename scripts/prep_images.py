@@ -69,11 +69,25 @@ def clean_alpha(a: np.ndarray) -> np.ndarray:
     return a
 
 
+def fill_small_holes(mask: np.ndarray, max_px: int) -> np.ndarray:
+    """Furos fechados (fundo cercado pelo objeto) menores que max_px viram parte da mascara."""
+    inv = (~mask).astype(np.uint8)
+    n, lab, st, _ = cv2.connectedComponentsWithStats(inv, connectivity=4)
+    touch = np.zeros(n, bool)
+    for edge in (lab[0, :], lab[-1, :], lab[:, 0], lab[:, -1]):
+        touch[np.unique(edge)] = True
+    small = np.zeros(n, bool)
+    small[1:] = st[1:, cv2.CC_STAT_AREA] < max_px
+    return mask | ((small & ~touch)[lab] & (inv == 1))
+
+
 def sticker(args) -> None:
     rgba = trim(read_rgba(args.inp))
     rgba = resize_long(rgba, args.long)
     rgb = grade(rgba[..., :3], args.sat)
-    a = clean_alpha(rgba[..., 3])
+    # --thin: objetos com partes finas (antenas, mastros, fuzis). Sem "apertar" o alfa (a parte fina sumiria e a
+    # borda de papel viraria pedacos soltos: o "i" e o "8" ao lado do navio).
+    a = cv2.GaussianBlur(rgba[..., 3], (0, 0), 0.5) if args.thin else clean_alpha(rgba[..., 3])
 
     pad = args.border + 40
     h, w = a.shape
@@ -83,9 +97,13 @@ def sticker(args) -> None:
     RGB = np.zeros((H, W, 3), np.uint8)
     RGB[pad : pad + h, pad : pad + w] = rgb
 
-    # borda branca: dilata o alfa (bordas arredondadas) e suaviza
+    # borda branca: dilata o alfa (bordas arredondadas) e suaviza. Com --thin a borda nasce de um limiar baixo,
+    # para acompanhar inteira as partes finas; --fill-paper fecha com papel os vaos pequenos (sem "renda").
     k = 2 * args.border + 1
-    border = cv2.dilate((A > 110).astype(np.uint8) * 255, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k)))
+    base = A > (40 if args.thin else 110)
+    border = cv2.dilate(base.astype(np.uint8) * 255, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k)))
+    if args.fill_paper > 0:
+        border = np.where(fill_small_holes(border > 127, args.fill_paper), 255, 0).astype(np.uint8)
     border = cv2.GaussianBlur(border, (0, 0), 1.1)
     # papel levemente quente (nao branco puro)
     paper = np.array([241, 236, 226], np.float32)
@@ -135,5 +153,7 @@ if __name__ == "__main__":
     p.add_argument("--width", type=int, default=2400)
     p.add_argument("--border", type=int, default=10)
     p.add_argument("--sat", type=float, default=0.72)
+    p.add_argument("--thin", action="store_true", help="sticker com partes finas: sem apertar o alfa, borda de limiar baixo")
+    p.add_argument("--fill-paper", type=int, default=0, help="fecha com papel os vaos menores que N px (escala do adesivo)")
     a = p.parse_args()
     {"sticker": sticker, "layer": layer, "plate": plate}[a.cmd](a)

@@ -1,11 +1,17 @@
-# Renderiza o video na nuvem (GitHub Actions) — o PC local nao precisa renderizar nada.
-# Dispara sozinho a cada push em main que mude o video, ou manualmente em Actions > Render video > Run workflow.
-# O MP4 final fica em: Actions > (execucao) > Artifacts > canada-intro
+# Renderiza os videos na nuvem (GitHub Actions) — o PC local nao precisa renderizar nada.
+# Dispara sozinho a cada push em main que mude os videos (renderiza todos, em paralelo), ou manualmente em
+# Actions > Render video > Run workflow (escolha um video e, se quiser, um intervalo de frames).
+# Cada MP4 fica em: Actions > (execucao) > Artifacts > canada-intro / canada-part1 / canada-part2 / canada-final
 name: Render video
 
 on:
   workflow_dispatch:
     inputs:
+      video:
+        description: 'Qual video renderizar'
+        type: choice
+        options: [todos, intro, part1, part2, final]
+        default: todos
       frames:
         description: 'Intervalo de frames para um teste rapido (ex: 0-300). Vazio = video inteiro.'
         required: false
@@ -26,9 +32,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  render:
+  choose:
     runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - id: m
+        env:
+          VIDEO: ${{ inputs.video || 'todos' }}
+        run: |
+          all='[{"key":"intro","id":"CanadaIntro"},{"key":"part1","id":"CanadaPart1"},{"key":"part2","id":"CanadaPart2"},{"key":"final","id":"CanadaFinal"}]'
+          if [ "$VIDEO" = todos ]; then m="$all"; else m=$(echo "$all" | jq -c --arg k "$VIDEO" '[.[] | select(.key == $k)]'); fi
+          echo "matrix=$m" >> "$GITHUB_OUTPUT"
+
+  render:
+    needs: choose
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.choose.outputs.matrix) }}
+    name: render ${{ matrix.key }}
     steps:
       - uses: actions/checkout@v4
 
@@ -55,17 +80,17 @@ jobs:
       - name: Renderizar (Remotion)
         env:
           FRAMES: ${{ inputs.frames }}
-        run: npx remotion render src/index.ts CanadaIntro out/canada-intro-raw.mp4 --concurrency=100% --log=info ${FRAMES:+--frames=$FRAMES}
+        run: npx remotion render src/index.ts ${{ matrix.id }} out/canada-${{ matrix.key }}-raw.mp4 --concurrency=100% --log=info ${FRAMES:+--frames=$FRAMES}
 
       - name: Tela curva + aberracao cromatica (ffmpeg, bilinear)
-        run: node scripts/crt-post.mjs out/canada-intro-raw.mp4 out/canada-intro.mp4
+        run: node scripts/crt-post.mjs out/canada-${{ matrix.key }}-raw.mp4 out/canada-${{ matrix.key }}.mp4
 
       - name: Conferir saida
-        run: ffprobe -v error -show_entries format=duration,size:stream=codec_name,width,height,r_frame_rate -of compact out/canada-intro.mp4
+        run: ffprobe -v error -show_entries format=duration,size:stream=codec_name,width,height,r_frame_rate -of compact out/canada-${{ matrix.key }}.mp4
 
       - uses: actions/upload-artifact@v4
         with:
-          name: canada-intro
-          path: out/canada-intro.mp4
+          name: canada-${{ matrix.key }}
+          path: out/canada-${{ matrix.key }}.mp4
           retention-days: 30
           compression-level: 0

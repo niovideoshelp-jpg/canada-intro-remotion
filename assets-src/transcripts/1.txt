@@ -1,0 +1,38 @@
+[   0.00-  11.48] On July 24th, 2024, Canadian and American fighter jets intercepted two Russian Tu-95 bombers and two Chinese H-6 bombers in Alaska's air defense identification zone.
+[  11.72-  14.54] All four remained in international airspace.
+[  15.12-  17.46] None entered Canadian or U.S. airspace.
+[  17.72-  26.38] The operation was carried out by NORAD, the North American Aerospace Defense Command, which brings the United States and Canada together under a bi-national command.
+[  26.94-  32.84] NORAD itself said the activity wasn't considered a threat. Even so, the aircraft were tracked and
+[  32.84-  37.86] intercepted. It was a practical example of how the two countries work together to keep an eye on
+[  37.86-  42.86] who's approaching North America. Canada has the equipment to patrol its Arctic region, monitor
+[  42.86-  48.22] foreign activity and carry out military operations, but its defense against larger threats has been
+[  48.22-  53.32] built around a partnership with the United States. To understand what the Canadians can do, we need
+[  53.32-  57.20] to look at both their equipment and the support network that lets them use it up north.
+[  57.68-  63.04] Canada's Arctic coastline alone stretches for roughly 162,000 kilometers.
+[  63.62-  68.00] Patrolling it means covering enormous distances in a region with very little infrastructure.
+[  68.50-  72.92] An aircraft might have the range to get somewhere, but keeping an operation going there takes
+[  72.92-  76.78] fuel, maintenance, communications and support for the people on the ground.
+[  77.04-  80.30] All of that has to be available where the mission is taking place.
+[  80.30-  83.16] The people who live there are part of this discussion too.
+[  83.50-  87.52] Local communities, governments, and indigenous peoples have interests of their own,
+[  87.60-  89.74] and they know the region's challenges firsthand.
+[  90.16-  94.30] Canadian policy recognizes their security as part of national security.
+[  94.52-  99.06] An airstrip, a communications network, or a refueling site can serve the military
+[  99.06- 101.86] while also making life better for people living in the north.
+[ 102.08- 104.40] A warming Arctic adds another concern.
+[ 104.72- 106.48] Access to the region is changing.
+[ 106.68- 108.90] But those changes aren't happening evenly.
+[ 109.46- 112.70] Less ice doesn't mean every route will be open and safe all year.
+[ 113.26- 118.82] Researchers Ryan Dean and P. Whitney Lackenbauer stress how much geography matters when assessing threats.
+[ 119.22- 125.04] Applying the same assumptions to the Canadian Arctic that you'd use for Northern Europe can lead you to the wrong conclusions.
+[ 125.36- 133.56] In documents prepared for Parliament in June 2026, the Canadian government said it saw no immediate military threat to its Arctic territory.
+[ 133.86- 138.44] At the same time, it identified Russia as the main military threat in the region.
+[ 138.90- 141.00] Those two assessments can both be true.
+[ 141.22- 146.70] A country can have the ability to strike Canada without being in the middle of planning an invasion of its islands.
+[ 146.98- 152.06] The main concern is aircraft and naval forces capable of launching long-range weapons.
+[ 152.32- 157.36] In a wider war, the Arctic could become a route for attacks on other parts of North America.
+[ 157.76- 166.18] Canada's foreign policy also warns about espionage, cyber operations, and intelligence gathering by platforms with both civilian and military uses.
+[ 166.82- 172.64] That includes Chinese ships that can collect data useful for scientific research as well as military applications.
+[ 173.04- 177.78] So counting how many troops are stationed in the far north only tells you part of the story.
+[ 178.26- 184.60] Responding to an emergency in a remote community and detecting an air attack coming across the Arctic are very different jobs.
+[ 184.84- 190.50] The sensors, the forces needed to respond, and even the partners involved will vary depending on the threat.

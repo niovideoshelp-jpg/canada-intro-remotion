@@ -9,12 +9,13 @@ O=public/img
 # recorte mais reparado primeiro: final (correcoes pontuais, scripts/fix_cutouts.py) > fixed (reparo generico,
 # scripts/repair_cutout.py: buracos pretos e borda magenta do export) > export cru do Canva
 pick() { for d in "$C/final" "$C/fixed" "$C"; do [ -f "$d/$1_cutout.png" ] && { echo "$d/$1_cutout.png"; return; }; done; }
-sticker() { src="$(pick "$1")"; [ -n "$src" ] && "$PY" -I scripts/prep_images.py sticker "$src" "$O/$1.png" --long "$2" --border "${3:-10}" --sat "${4:-0.72}" || echo "skip $1 (sem recorte)"; }
+# 5o argumento opcional: flags extras do prep_images (ex.: "--thin --fill-paper 1500" para mastros e antenas)
+sticker() { src="$(pick "$1")"; [ -n "$src" ] && "$PY" -I scripts/prep_images.py sticker "$src" "$O/$1.png" --long "$2" --border "${3:-10}" --sat "${4:-0.72}" ${5:-} || echo "skip $1 (sem recorte)"; }
 sticker polar-bear 1100 9
 sticker moose 1100 9
 sticker people 1000 9 0.55
 sticker cf18 1300 10
-sticker dewolf 1500 11
+sticker dewolf 1500 11 0.72 "--thin --fill-paper 1500"
 sticker soldiers 1100 10
 # camadas de parallax: o recorte do Canva vira a camada proxima; a placa distante e refeita com
 # preenchimento espelhado (scripts/fill_rows.py), que nao deixa "fantasma" quando as camadas se movem
