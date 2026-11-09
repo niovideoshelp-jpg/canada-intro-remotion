@@ -86,6 +86,10 @@ export const P1S01: React.FC = () => {
     fadeIn(tl, q, '.p1s01-jets', L(T('jets') - 0.1), 0.3);
     wipeText(tl, q, '.p1s01-l-tu', L(T('tu') + 0.05), 0.35);
     wipeText(tl, q, '.p1s01-l-h6', L(T('h') + 0.05), 0.35);
+    // "Canadian and American fighter jets": CF-18 e F-35 (o F-35A do recorte e do Alasca) entram pela esquerda
+    slideIn(tl, q, '.p1s01-ph-cf', L(T('canadian') - 0.15), -820, 2, 0.6);
+    slideIn(tl, q, '.p1s01-ph-f35', L(T('american') - 0.15), -820, -2, 0.6);
+    tl.to(q('.p1s01-ph-cf, .p1s01-ph-f35'), {x: -900, autoAlpha: 0, duration: 0.5, ease: 'power2.in'}, L(T('intercepted') + 0.3));
     slideIn(tl, q, '.p1s01-ph-tu', L(T('russian') - 0.15), 820, -2, 0.7);
     slideIn(tl, q, '.p1s01-ph-h6', L(T('chinese') - 0.15), 820, 2, 0.7);
     tl.to(q('.p1s01-ph-tu, .p1s01-ph-h6'), {x: 900, autoAlpha: 0, duration: 0.55, ease: 'power2.in'}, L(T('alaskas') - 0.1));
@@ -173,6 +177,10 @@ export const P1S01: React.FC = () => {
         </div>
       </div>
 
+      {/* os cacas que interceptaram (CF-18 canadense, F-35A americano) */}
+      <Sticker cls="p1s01-ph-cf" src="img/cf18.png" x={420} y={360} w={560} />
+      <Sticker cls="p1s01-ph-f35" src="img/f35.png" x={430} y={700} w={580} />
+
       {/* as fotos reais dos dois bombardeiros */}
       <Sticker cls="p1s01-ph-tu" src="img/tu95.png" x={1520} y={330} w={560} />
       <Sticker cls="p1s01-ph-h6" src="img/h6.png" x={1540} y={730} w={540} />
@@ -234,6 +242,7 @@ const Watch: React.FC = () => {
 };
 
 export const cues: Cue[] = [
+  {at: T('canadian') - 0.25, file: 'jet_flyby', vol: 0.16, dur: 2.4, fadeOut: 0.8},
   {at: T('july') + 0.2 - 0.008, file: 'stamp', vol: 0.3, dur: 0.6},
   {at: T('jets') - 0.2, file: 'jet_flyby', vol: 0.2, dur: 3.2, fadeOut: 0.8},
   {at: 3.7 - 0.116, file: 'whoosh_soft', vol: 0.18, dur: 1.0},

@@ -46,7 +46,7 @@ export const P1S13: React.FC = () => {
   const L = useLocal();
 
   const scope = useGsapTimeline<HTMLDivElement>(({timeline: tl, selector: q}) => {
-    docIn(tl, q, 'p1s13-doc', L(T('foreign') - 0.55), -900);
+    docIn(tl, q, 'p1s13-doc', L(157.35), -900); // ja na cortina
     popIn(tl, q, 'p1s13-warn', L(T('warns') - 0.1));
     BADGES.forEach((b) => popIn(tl, q, b.cls, L(T(b.word) - 0.12)));
     popSvg(tl, q, '.p1s13-dual', L(T('platforms') - 0.05));
@@ -167,7 +167,7 @@ const Sonar: React.FC<{t: number}> = ({t}) => {
 };
 
 export const cues: Cue[] = [
-  {at: T('foreign') - 0.55 + 0.25, file: 'paper_slide', vol: 0.18, dur: 0.8},
+  {at: 157.35 + 0.25, file: 'paper_slide', vol: 0.18, dur: 0.8},
   {at: T('warns') - 0.1, file: 'pop2', vol: 0.14, dur: 0.3},
   {at: T('espionage') - 0.12, file: 'pop', vol: 0.18, dur: 0.3},
   {at: T('cyber') - 0.12, file: 'pop2', vol: 0.18, dur: 0.3},

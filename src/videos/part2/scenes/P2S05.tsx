@@ -42,7 +42,7 @@ export const P2S05: React.FC = () => {
 
   const scope = useGsapTimeline<HTMLDivElement>(({timeline: tl, selector: q}) => {
     // 1
-    SYS.forEach((s, k) => popIn(tl, q, s.cls, L(T('all') - 0.15 + k * 0.16)));
+    SYS.forEach((s, k) => popIn(tl, q, s.cls, L(47.45 + k * 0.2))); // ja na cortina
     SYS.forEach((_, k) => {
       const a = L(T('work') - 0.25 + k * 0.1);
       draw(tl, q, `.p2s05-l${k}a`, a, 0.32, 'none');
@@ -171,7 +171,7 @@ export const P2S05: React.FC = () => {
 };
 
 export const cues: Cue[] = [
-  ...SYS.map((_, k) => ({at: T('all') - 0.15 + k * 0.16, file: k % 2 ? 'pop2' : 'pop', vol: 0.14, dur: 0.3})),
+  ...SYS.map((_, k) => ({at: 47.45 + k * 0.2, file: k % 2 ? 'pop2' : 'pop', vol: 0.14, dur: 0.3})),
   {at: T('work') - 0.25, file: 'pen_scribble', vol: 0.1, dur: 0.9, fadeOut: 0.3},
   {at: T('challenge') - 0.2, file: 'ice_crack', vol: 0.14, dur: 1.0, fadeOut: 0.4},
   {at: T('2022') - 0.6 + 0.25, file: 'paper_slide', vol: 0.18, dur: 0.8},

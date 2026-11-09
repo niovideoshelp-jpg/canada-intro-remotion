@@ -35,7 +35,7 @@ export const P2S11: React.FC = () => {
   const L = useLocal();
 
   const scope = useGsapTimeline<HTMLDivElement>(({timeline: tl, selector: q}) => {
-    slideIn(tl, q, '.p2s11-jet', L(T('transition') - 0.6), 1200, 0, 0.8);
+    slideIn(tl, q, '.p2s11-jet', L(137.78), 1200, 0, 0.8); // ja na cortina
     popIn(tl, q, 'p2s11-warn', L(T('problems') - 0.12));
     stampIn(tl, q, 'p2s11-audit', L(T('audit') - STAMP_HIT));
     popIn(tl, q, 'p2s11-clock', L(T('delays') - 0.1));
@@ -101,7 +101,7 @@ const RowLabel: React.FC<{cls: string; x: number; y: number; text: string}> = ({
 );
 
 export const cues: Cue[] = [
-  {at: T('transition') - 0.6, file: 'whoosh_soft', vol: 0.14, dur: 1.0},
+  {at: 137.78, file: 'whoosh_soft', vol: 0.14, dur: 1.0},
   {at: T('problems') - 0.12, file: 'pop2', vol: 0.16, dur: 0.3},
   {at: T('audit') - 0.008, file: 'stamp', vol: 0.26, dur: 0.6},
   {at: T('delays') - 0.1, file: 'pop', vol: 0.14, dur: 0.3},

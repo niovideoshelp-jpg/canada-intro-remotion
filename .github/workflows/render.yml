@@ -28,7 +28,8 @@ on:
       - '.github/workflows/render.yml'
 
 concurrency:
-  group: render-${{ github.ref }}
+  # um grupo por video: renderizar a Parte 2 nao cancela a Parte 1 (um novo push/dispatch do MESMO video cancela o anterior)
+  group: render-${{ github.ref }}-${{ inputs.video || 'todos' }}
   cancel-in-progress: true
 
 jobs:

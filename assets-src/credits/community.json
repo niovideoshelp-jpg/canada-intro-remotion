@@ -1,0 +1,28 @@
+{
+  "name": "community",
+  "place": "Iqaluit, Nunavut (seen from Joamie Hill)",
+  "label": "IQALUIT, NUNAVUT",
+  "files": {
+    "source": "assets-src/photos/community.jpg",
+    "cutout": "assets-src/canva/community-fg_cutout.png",
+    "final": "assets-src/canva/final/community-fg_cutout.png",
+    "bg": "assets-src/canva/community-bg_rows.jpg",
+    "public": "public/img/community-fg.png",
+    "public_bg": "public/img/community-bg.jpg"
+  },
+  "title": "Iqaluit from Joamie Hill.JPG",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Iqaluit_from_Joamie_Hill.JPG",
+  "author": "Aaron M Lloyd",
+  "license": "Public domain",
+  "modified": "recortada em camadas de parallax, fundo retocado, cor tratada",
+  "canva": {
+    "source_media_id": "MAHabSisDnE",
+    "cutout_media_id": "MAHaba059Tw",
+    "design_id": "DAHabYSTu6A",
+    "band_source_media_id": "MAHabWReGL4",
+    "band_cutout_media_id": "MAHabV-IXwk",
+    "band_design_id": "DAHabRUwW9k"
+  },
+  "prep": "\"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py layer C:/Users/ELCO/Desktop/CANADA/assets-src/canva/final/community-fg_cutout.png C:/Users/ELCO/Desktop/CANADA/public/img/community-fg.png --width 2400 --sat 0.66 && \"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py plate C:/Users/ELCO/Desktop/CANADA/assets-src/canva/community-bg_rows.jpg C:/Users/ELCO/Desktop/CANADA/public/img/community-bg.jpg --width 2400 --sat 0.66",
+  "notes": "Public domain: Commons tag PD-user, 'I Aaron M Lloyd created this work entirely by myself'; description 'A View of Iqaluit from Joamie Hill', 10 May 2010 (no attribution required; courtesy credit 'Photo: Aaron M Lloyd, public domain, via Wikimedia Commons'). Spring snow on the hill in the foreground with a storage shed draped in fishing net, boards, a blue tarp and sleds, and a Canadian flag on a pole. Below, Iqaluit's houses and the snowy hills, with a clear sky. Only tiny, unidentifiable people far away. Original 4000x2167 (assets-src/tmp-land/orig/community_iqaluit_joamie_orig.jpg) downscaled to 3200x1734 (PIL Lanczos, JPEG q95) = photos/community.jpg. LAYERS. Canva remove-background on the whole photo kept 'everything but the sky' (MAHaba059Tw, design DAHabYSTu6A, kept as tmp-land/community_canva_export_v1.png), and from it only the flag, halyard and pole above y=470 are used. A lower-band upload (crop y 950-1734, MAHabWReGL4 -> MAHabV-IXwk, design DAHabRUwW9k, tmp-land/community_band_export.png) gave the objects: shed, net, crates, chair, tarp, sleds and the pole stub. The NEAR layer (canva/community-fg_cutout.png, built by tmp-land/scripts/build_community_fg.py) combines those Canva alphas with the pole between y 440 and 1145, drawn as a 14 px polygon measured on the photo, and the snow ground the objects stand on, so the shed's base moves with its own ground. That ground's top edge was drawn by hand on the photo: on the left it runs along the snow side of the snow/dark-earth crest (y 1502 at x=0 to y 1305 at x=1700, 4 px soft). On the right, from x 2300 to 2860 it runs through the bright snow under the ledge's dark streak (y ~1116-1134), and from x 2900 to 3200 it sits 2-3 px under the rock band's lower edge (y ~1086-1069). The far town, the dark crest band, the rock band, the hills, the sky and the white barrel at x~470-560 stay in the plate. Final = that alpha + photo RGB (scripts/alpha_cutout.py --decontam); one piece, bbox 3200x1594 (y 140-1733). FAR PLATE (2400x1300): scripts/fill_rows.py averages and blurs, and here it left a grey smear above the roof and a smeared column along the pole (kept as tmp-land/check/community_z_shed.jpg and community_z_flag.jpg). The delivered plate uses tmp-land/scripts/fill_mirror2.py instead, a nearest-edge mirror: holes are filled from the nearest side, or from above, without averaging, and the sky gets a plain left/right interpolation. Its mask is the objects + flag/pole, dilated 8 px, plus a 54 px strip under the left ground edge, so that edge reveals mirrored dark earth instead of a second copy of the near snow. Two local fixes followed. (1) The pole column over the hill (y 590-1100) is the real hill texture from the strip just right of it, Poisson-blended (cv2.seamlessClone; tmp-land/scripts/community_pole_clone.py). (2) The skyline crossing (y 470-590) is a row-wise colour interpolation (community_pole_rowinterp.py). Elsewhere the plate is the untouched photo (under the right ground edge too; there a downward slide just shows the snow ledge a little taller). CHECKS at plate scale: plate + fg aligned, fg shifted +-30 px in x and +-20 px in y, and +35 px down at the shed. No ghost and no smear at the skylines; the flag/pole reveal clean sky and hill. KNOWN LIMITS: (a) if the near layer slides down more than ~20 px relative to the plate, the strip above the shed roof (plate x ~1240-1850, y ~780-830) shows a mirrored snow texture with faint chevrons; (b) when the pole drifts more than ~25 px sideways, the filled column (plate x ~1870-1905) is visible as a slightly repeated hill texture. Keep the relative drift of near vs far at about 20-25 px or less (e.g. depths 0.35/0.85 with a 1.0->1.10 push-in). Alignment: both files are 2400x1300 (same frame); place them with the same Plate width and centre. The near layer covers the whole bottom of the plate from y ~1050 (2400 scale) down, so overscan is not needed at the bottom."
+}
