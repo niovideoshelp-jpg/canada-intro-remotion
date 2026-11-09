@@ -1,0 +1,23 @@
+{
+  "name": "rangers",
+  "files": {
+    "source": "assets-src/photos/rangers.jpg",
+    "cutout": "assets-src/canva/rangers_cutout.png",
+    "final": "assets-src/canva/final/rangers_cutout.png",
+    "public": "public/img/rangers.png"
+  },
+  "title": "Canadian Rangers.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Canadian_Rangers.jpg",
+  "author": "US Mission Canada",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "credit_line": "Photo: \"Canadian Rangers\" by US Mission Canada, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/), via Wikimedia Commons. Cropped, cut out and color-graded.",
+  "modified": "recortada (5 dos rangers da fileira), cor tratada",
+  "canva": {
+    "source_media_id": "MAHabUs67uo",
+    "cutout_media_id": "MAHabdYLzWI",
+    "design_id": "DAHabRjekUA"
+  },
+  "prep": "\"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py sticker C:/Users/ELCO/Desktop/CANADA/assets-src/canva/final/rangers_cutout.png C:/Users/ELCO/Desktop/CANADA/public/img/rangers.png --long 1100 --border 10 --sat 0.72 --thin",
+  "notes": "ATTRIBUTION REQUIRED (CC BY 2.0; Flickr original https://www.flickr.com/photos/us_mission_canada/5878501412, FlickreviewR passed). Commons description: 'Canadian Rangers in Nunavut, Canada', 18 Jun 2011. A line of Canadian Rangers in their red Ranger hoodies and caps, CADPAT trousers and boots, holding Lee-Enfield No. 4 rifles at port arms on the gravel of a Nunavut settlement (a ceremonial drill, not a field exercise; Commons has no PD/OGL/CC BY photo of Rangers in red out on the land or ice: the other Commons files are a posed 17-person group photo, distant camp/snowmobile shots at Alert, and a politician's visit). Full bodies at medium distance; faces visible but not close-ups. Original 2880x2160 (kept as assets-src/tmp-land/orig/rangers_canadian_rangers_orig.jpg) cropped to box 170,280,1545,1600 = 1375x1320, no downscale = photos/rangers.jpg: the 5 leftmost Rangers (4 in the front row + 1 behind). The Canva upload was this crop centred on a 2600x2500 canvas filled with flat grey (143,136,141) at offset (612,590) (assets-src/tmp-land/rangers_helper_padded.jpg), so the subject is not 'too large' for the layer step; the export (2600x2500, lossless pro) was cropped back to the source frame (pixel-registered). Final = Canva alpha + photo RGB (scripts/alpha_cutout.py: 1 speck dropped, 163 hole px filled), then the 50 px sliver of the 6th Ranger at the right crop edge was erased along the seam between his hoodie and the 5th Ranger's (polygon 1336,340 1376,340 1376,1321 1318,1321 1318,1000 1320,700 1319,600 1318,540 1313,520 1315,470 1317,430 1321,410 1329,380; assets-src/tmp-land/scripts/erase_poly.py); pre-erase file assets-src/tmp-land/rangers_step1.png. Result: 2 alpha components (the leftmost Ranger stands apart; the other four are joined), clean edges, rifles complete, Ranger shoulder patches and Canadian flag patches identical to the photo. Sticker 1174x1076. Checked at 640 px wide over the grid at 1x and 2x: complete, no background chunks, no webbing. Red hoodies are the natural accent the storyboard asks for. Do not mirror (flag patches)."
+}

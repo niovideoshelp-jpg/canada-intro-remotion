@@ -1,0 +1,21 @@
+{
+  "name": "p8",
+  "files": {
+    "source": "assets-src/photos/p8.jpg",
+    "cutout": "assets-src/canva/p8_cutout.png",
+    "final": "assets-src/canva/final/p8_cutout.png",
+    "public": "public/img/p8.png"
+  },
+  "title": "P-8A Poseidon VX-20 Squadron.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:P-8A_Poseidon_VX-20_Squadron.jpg",
+  "author": "Greg L. Davis",
+  "license": "Public domain",
+  "modified": "recortada, cor tratada",
+  "canva": {
+    "source_media_id": "MAHaa3VZkg4",
+    "cutout_media_id": "MAHaa9SdPI8",
+    "design_id": "DAHabOUrO4w"
+  },
+  "prep": "\"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py sticker C:/Users/ELCO/Desktop/CANADA/assets-src/canva/final/p8_cutout.png C:/Users/ELCO/Desktop/CANADA/public/img/p8.png --long 1400 --border 10 --sat 0.72 --thin",
+  "notes": "US Navy Boeing P-8A Poseidon (BuNo 167951, '951') of Air Test and Evaluation Squadron VX-20 over the Chesapeake Bay, 27 Jan 2012 (Commons tags PD US Navy, CC-PD-Mark). Left 3/4 view, NOSE RIGHT (in P2S19 it sits on the right, flying the same way as the chalk arrow from the CP-140), whole aircraft incl. far wing, fin and both tailplanes; plain clear blue sky. Landing gear is down (just after take-off). No RCAF P-8A photo with a free licence exists on Commons yet (Canada's P-8As are still at Boeing), so a USN aircraft stands in. Original 3952x2328 (kept as assets-src/tmp-air/orig/p8_vx20.jpg) cropped to box 40,520,3900,1800 and downscaled to 3200x1061 (PIL Lanczos, JPEG q95) = photos/p8.jpg. Canva remove-background + layer design exported as transparent lossless PNG 3200x1061 (pro); final = Canva alpha + photo RGB (scripts/alpha_cutout.py: 1 component, no specks, no holes), subject bbox 3074x946. The blue patch on the far tailplane is the real underside of the tailplane in shade (it reflects the sky; checked against the photo), not leftover sky. The tiny aft-pointing wick at the fin tip was dropped by Canva. Sticker 1470x506. Checked at 640 px wide over the grid at 1x and 2x: complete, no webbing, 'NAVY', roundel and '951' identical to the photo. Clean-configuration alternative (gear up, nose left, white clouds behind): 'Boeing P-8A Poseidon flies over Jacksonville (2).jpg' (PD US Navy, 2428x1119), kept as assets-src/tmp-air/orig/p8_jax2.jpg."
+}

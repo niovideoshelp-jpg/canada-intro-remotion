@@ -1,0 +1,21 @@
+{
+  "name": "usjet",
+  "files": {
+    "source": "assets-src/photos/usjet.jpg",
+    "cutout": "assets-src/canva/usjet_cutout.png",
+    "final": "assets-src/canva/final/usjet_cutout.png",
+    "public": "public/img/usjet.png"
+  },
+  "title": "F-22 3d WG.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:F-22_3d_WG.jpg",
+  "author": "Tech. Sgt. William A Keele",
+  "license": "Public domain",
+  "modified": "recortada, cor tratada",
+  "canva": {
+    "source_media_id": "MAHaaz68tMI",
+    "cutout_media_id": "MAHaa92_R6o",
+    "design_id": "DAHaa_pOWww"
+  },
+  "prep": "\"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py sticker C:/Users/ELCO/Desktop/CANADA/assets-src/canva/final/usjet_cutout.png C:/Users/ELCO/Desktop/CANADA/public/img/usjet.png --long 1300 --border 10 --sat 0.72 --thin",
+  "notes": "USAF F-22A Raptor of the 3rd Wing, Joint Base Elmendorf-Richardson, Alaska (tail 'AK 3 WG'), the JBER fighter that flies NORAD intercepts of Russian bombers off Alaska; in a formation of all Alaska-based fighters, 21 Apr 2020 (U.S. Air National Guard photo 200421-Z-DV655-9279, https://media.defense.gov/2021/Oct/04/2002867051/-1/-1/0/200421-Z-DV655-9279.JPG; Commons tag PD US military). Left 3/4 view, nose LEFT, whole jet incl. both fins and tailplanes, plain blue sky. Original 5949x4249 (kept as assets-src/tmp-air/orig/f22_3dwg.jpg) cropped to box 450,950,5949,2800 and downscaled to 3200x1077 (PIL Lanczos, JPEG q95) = photos/usjet.jpg. The tip of the far-side tailplane ends ~9 px inside the original frame edge, so in the crop it sits ~5 px from the right edge (complete, but the alpha there is soft). Canva remove-background kept BOTH Raptors (the second one, 'AK 525 FS', flies above-left and is partly cut by the crop); exported transparent lossless PNG 3200x1077 (pro), final = Canva alpha + photo RGB (scripts/alpha_cutout.py), then the second jet was removed by keeping only the alpha component under seed (1600,780) (assets-src/tmp-air/scripts/keep_component.py; two separate components, the near jet kept: bbox x94-3199 y135-963). Sticker 1368x424. Checked at 640 px wide over the grid at 1x and 2x: one jet, complete, no sky left, 'AK 3 WG' identical to the photo. F-16 alternative if wanted: the F-16C of the 354th FW in the 24 July 2024 intercept frames (DVIDS 8549617/8549618)."
+}

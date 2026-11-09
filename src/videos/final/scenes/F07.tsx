@@ -127,7 +127,7 @@ const Threats: React.FC<{bombP: number}> = ({bombP}) => {
 
 export const cues: Cue[] = [
   {at: T('respond') - 0.05, file: 'pop', vol: 0.18, dur: 0.3},
-  {at: T('depends') - 0.1, file: 'tick', vol: 0.16, dur: 0.3},
+  {at: T('depends') - 0.1, file: 'radar_ping', vol: 0.12, dur: 1.0},
   {at: T('threat') - 0.2, file: 'pop2', vol: 0.18, dur: 0.3},
   {at: T('norads') - 0.12, file: 'marker_swipe', vol: 0.2, dur: 0.6},
 ];

@@ -1,0 +1,21 @@
+{
+  "name": "h6",
+  "files": {
+    "source": "assets-src/photos/h6.jpg",
+    "cutout": "assets-src/canva/h6_cutout.png",
+    "final": "assets-src/canva/final/h6_cutout.png",
+    "public": "public/img/h6.png"
+  },
+  "title": "Chinese H-6K is intercepted off Alaska (USA) by CF-18A, F-16C and F-35A, 24 July 2024 (240724-F-D0430-1002).JPG",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Chinese_H-6K_is_intercepted_off_Alaska_(USA)_by_CF-18A,_F-16C_and_F-35A,_24_July_2024_(240724-F-D0430-1002).JPG",
+  "author": "U.S. Department of Defense Photo",
+  "license": "Public domain",
+  "modified": "recortada, cor tratada",
+  "canva": {
+    "source_media_id": "MAHaa7BLKl0",
+    "cutout_media_id": "MAHaa5k1HsM",
+    "design_id": "DAHaayFyLmo"
+  },
+  "prep": "\"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py sticker C:/Users/ELCO/Desktop/CANADA/assets-src/canva/final/h6_cutout.png C:/Users/ELCO/Desktop/CANADA/public/img/h6.png --long 1300 --border 10 --sat 0.72 --thin",
+  "notes": "One of the two PLAAF Xi'an H-6K bombers intercepted in the Alaska ADIZ on 24 July 2024, the cold-open event (USAF ID 240724-F-D0430-1002, same NORAD release as tu95; DVIDS 8549615; Commons tag PD US Military). The H-6K (tail number 20013, PLAAF star-and-bar, red diamond marking) flies above a CF-18A, an F-35A and an F-16C. Original 5472x3648 (kept as assets-src/tmp-air/orig/h6_1002.jpg) cropped to the bomber only, box 1100,1330,3680,2250 (2580x920, no downscale; the fighters below start ~100 px under the crop) = photos/h6.jpg. Left side view, nose left, whole aircraft incl. tail, tailplane, both wing pylons; plain overcast grey sky. Canva remove-background + layer design exported as transparent lossless PNG 2580x920 (pro); final = Canva alpha + photo RGB (scripts/alpha_cutout.py: 1 component, no specks, no holes), subject bbox 2267x618. Sticker 1369x429. Checked at 620 px wide over the grid at 1x and 2x: complete, no leftover sky, markings identical to the photo."
+}

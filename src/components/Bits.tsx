@@ -95,3 +95,33 @@ export const HandArrow: React.FC<{cls: string; from: [number, number]; to: [numb
     </g>
   );
 };
+
+/**
+ * "≠" num disco escuro com aro de giz (o glifo da fonte fica fino demais). (x, y) = centro.
+ * A classe `cls` fica no disco (anime com pop / fromTo scale).
+ */
+export const NotEqual: React.FC<{cls: string; x: number; y: number; size?: number}> = ({cls, x, y, size = 168}) => (
+  <div style={at(x, y)}>
+    <div
+      className={cls}
+      style={{
+        width: size,
+        height: size,
+        borderRadius: '50%',
+        backgroundColor: C.black,
+        boxShadow: `0 0 0 ${Math.round(size * 0.036)}px ${C.ink}, 0 14px 34px ${C.shadow}`,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <svg width={size * 0.62} height={size * 0.62} viewBox="0 0 100 100" style={{display: 'block', overflow: 'visible'}}>
+        <g stroke={C.red} strokeWidth={12} strokeLinecap="round" fill="none">
+          <path d="M14 36 L86 36" />
+          <path d="M14 64 L86 64" />
+          <path d="M66 10 L34 90" />
+        </g>
+      </svg>
+    </div>
+  </div>
+);

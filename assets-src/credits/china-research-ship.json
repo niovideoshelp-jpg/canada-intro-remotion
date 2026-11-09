@@ -1,0 +1,23 @@
+{
+  "name": "china-research-ship",
+  "files": {
+    "source": "assets-src/photos/china-research-ship.jpg",
+    "cutout": "assets-src/canva/china-research-ship_cutout.png",
+    "final": "assets-src/canva/final/china-research-ship_cutout.png",
+    "public": "public/img/china-research-ship.png"
+  },
+  "title": "U.S. Coast Guard photo 250902-G-G0200-1001: the China-flagged research vessel JIDI about 265 miles northwest of Utqiagvik, Alaska, 2 Sept 2025",
+  "source_page": "https://www.news.uscg.mil/Doing-Business/Photos/igphoto/2003792001/",
+  "file_url": "https://gcaptain.com/wp-content/uploads/2025/09/250902-G-G0200-1001.jpg",
+  "release": "https://content.govdelivery.com/accounts/USDHSCG/bulletins/3f0f03d",
+  "author": "U.S. Coast Guard Courtesy Photo",
+  "license": "Public domain",
+  "modified": "recortada, cor tratada",
+  "canva": {
+    "source_media_id": "MAHabKJCXn8",
+    "cutout_media_id": "MAHabPwe-z8",
+    "design_id": "DAHabBshMJQ"
+  },
+  "prep": "\"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py sticker C:/Users/ELCO/Desktop/CANADA/assets-src/canva/final/china-research-ship_cutout.png C:/Users/ELCO/Desktop/CANADA/public/img/china-research-ship.png --long 1500 --border 11 --sat 0.72 --thin --fill-paper 1500",
+  "notes": "Chinese polar research icebreaker JI DI (极地, IMO 9970351, home port Qingdao, Ministry of Natural Resources) in Arctic pack-ice floes about 265 miles NW of Utqiagvik, Alaska, 2 Sept 2025, photographed while USCGC Healy monitored it (USCG Arctic District release of 3 Sept 2025, 'U.S. Coast Guard bolsters surface presence and responds to 2 Chinese research vessels in the Arctic'; VIRIN 250902-G-G0200-1001, credit 'U.S. Coast Guard Courtesy Photo'; work of the U.S. federal government -> public domain; DVIDS labels USCG courtesy photos PUBLIC DOMAIN). Ji Di is one of the five Chinese research ships the USCG tracked in the U.S. Arctic in Aug-Sept 2025. NOT ON COMMONS: Commons has no USCG photo of a Chinese research ship; the official pages (news.uscg.mil igphoto 2003792001) and media.defense.gov refuse automated requests (HTTP 403), so the file was taken from gCaptain's copy of the same USCG photo (1600x1067, sharp, no watermark or overlay; High North News serves the same image, only upscaled). Side view, BOW RIGHT, whole ship stern to bow incl. masts, Chinese flag, cranes; the hull lettering (极地 JI DI IMO9970351 / 青岛 QINGDAO, 极地, JI DI) and the funnel logo come from the photo (the Canva layer design re-typed them, e.g. '框地', so only its alpha is used). photos/china-research-ship.jpg = that file, unchanged. Canva remove-background + layer design exported as transparent lossless PNG 1600x1067 (pro); final = Canva alpha + photo RGB (scripts/alpha_cutout.py; a thin crane cable hanging from the white stern crane was dropped as a speck). Local alpha fixes (assets-src/tmp-sea/scripts/, only remove alpha): fix_china_stern.py removes the grey water and the white/blue ice-floe strip Canva kept between the yellow stern cranes (box 88,664,300,734); sky_key.py --ymax 530 --thin 6 --box 855,285,1000,470 770,280,850,440 removes the grey overcast sky inside the lattice mast and around the flag halyards; despeck.py drops specks <20 px. The bow mast stands against white ice, so a little ice is still inside its outline (it blends with the paper border). Sticker 1496x607 (the ship is ~1400 px wide in the source, so the sticker is at native resolution, not upscaled). Checked at 800-900 px wide over the grid at 1x and 2x and against the photo. Other USCG photos found (lower quality): Xue Long 2 from a C-130J, 13 Aug 2025 (250813-G-G0200-1002, 1280x720, hazy aerial), Xue Long in the Bering Sea, 12 July 2026 (260712-G-G0200-1001, distant, hazy)."
+}

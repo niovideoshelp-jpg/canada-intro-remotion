@@ -1,0 +1,21 @@
+{
+  "name": "tu95",
+  "files": {
+    "source": "assets-src/photos/tu95.jpg",
+    "cutout": "assets-src/canva/tu95_cutout.png",
+    "final": "assets-src/canva/final/tu95_cutout.png",
+    "public": "public/img/tu95.png"
+  },
+  "title": "NORAD detects, tracks and intercepts Russian and PRC aircraft operating in the Alaska ADIZ [Image 3 of 5] (VIRIN 240724-F-D0430-1003)",
+  "source_page": "https://www.dvidshub.net/image/8549616/norad-detects-tracks-and-intercepts-russian-and-prc-aircraft-operating-alaska-adiz",
+  "author": "Department of Defense Photo (courtesy photo, North American Aerospace Defense Command)",
+  "license": "Public domain",
+  "modified": "recortada, cor tratada",
+  "canva": {
+    "source_media_id": "MAHaayb0sV8",
+    "cutout_media_id": "MAHaaz-eq_g",
+    "design_id": "DAHaa2jZFgI"
+  },
+  "prep": "\"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py sticker C:/Users/ELCO/Desktop/CANADA/assets-src/canva/final/tu95_cutout.png C:/Users/ELCO/Desktop/CANADA/public/img/tu95.png --long 1300 --border 10 --sat 0.72 --thin",
+  "notes": "THE photo of the episode's cold open: one of the two Russian Tu-95MS 'Bear' bombers intercepted in the Alaska ADIZ on 24 July 2024 (the same NORAD release as the H-6K photos; DVIDS image 8549616, VIRIN 240724-F-D0430-1003, taken 24 Jul 2024, unit NORAD). US DoD work, public domain (17 U.S.C. 105; the sister frames 240724-F-D0430-1002/-1005 are on Commons tagged PD US Military). Not on Commons, so the original 5472x3648 was downloaded from DVIDS (https://d34w7g4gy10iej.cloudfront.net/photos/2407/8549616.jpg) and kept as assets-src/tmp-air/orig/dv_8549616.jpg. The bomber flies with an F-16 and an F-35 lower left; the source was cropped to the bomber only, box 2380,1080,4260,1730 (1880x650, no downscale) = photos/tu95.jpg. Left side view, slightly from below, nose left: all 8 contra-rotating propellers, refuelling probe, far wing and tail complete; plain hazy grey-blue sky. Real markings kept from the photo pixels: red star, tail number 41, 'RF-94186', 'ВКС РОССИИ'. Canva remove-background + layer design exported as transparent lossless PNG 1880x650 (pro); final = Canva alpha + photo RGB (scripts/alpha_cutout.py: 1 component, no specks, no holes), subject bbox 1507x387. Sticker 1369x403. Checked at 620 px wide over the grid at 1x and 2x: complete, no webbing, no floating paper, lettering identical to the photo. LOCAL FIX (verification pass 3): between the two horizontal tailplanes Canva had kept a 1-7 px band of sky on top of the near (lower) tailplane and cut a 2-6 px slit into the lower edge of the far one (final cutout x 1444-1680, y 375-395; in the sticker it read as a ragged light strip). The alpha there was re-derived from the photo luminance with assets-src/tmp-verify3-air/scripts/fix_tu95_tailplanes.py (RGB untouched, still 1 component); pre-fix cutout kept as assets-src/tmp-verify3-air/tu95_final_before_tailfix.png, then the sticker was re-made with the same prep command."
+}

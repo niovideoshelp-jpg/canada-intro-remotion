@@ -1,0 +1,21 @@
+{
+  "name": "f35",
+  "files": {
+    "source": "assets-src/photos/f35.jpg",
+    "cutout": "assets-src/canva/f35_cutout.png",
+    "final": "assets-src/canva/final/f35_cutout.png",
+    "public": "public/img/f35.png"
+  },
+  "title": "220211-F-LP948-9002.JPG",
+  "source_page": "https://commons.wikimedia.org/wiki/File:220211-F-LP948-9002.JPG",
+  "author": "Master Sgt. Richard Ebensberger",
+  "license": "Public domain",
+  "modified": "recortada, cor tratada",
+  "canva": {
+    "source_media_id": "MAHaa9FnMcM",
+    "cutout_media_id": "MAHaayalMP8",
+    "design_id": "DAHaa6rKUww"
+  },
+  "prep": "\"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py sticker C:/Users/ELCO/Desktop/CANADA/assets-src/canva/final/f35_cutout.png C:/Users/ELCO/Desktop/CANADA/public/img/f35.png --long 1300 --border 10 --sat 0.72 --thin",
+  "notes": "USAF F-35A Lightning II of the 356th Fighter Squadron, Eielson AFB, Alaska (tail 'AK', serial ending 5450), flying alongside a KC-46A over the Pacific on 11 Feb 2022 (USAF photo 220211-F-LP948-9002, original at https://www.af.mil/News/Photos/igphoto/2002941702/; Commons tag PD USAF). Clean left side view, NOSE RIGHT like the cf18 sticker (good for the P2S08->P2S09 'dashed outline' match cut), whole aircraft incl. both tailplanes, canopy and pilot; sky with soft white cloud. Original 7952x4472 (kept as assets-src/tmp-air/orig/f35_220211.jpg) cropped to box 880,1330,6960,3010 and downscaled to 3200x884 (PIL Lanczos, JPEG q95) = photos/f35.jpg. The photo is contrasty and dark on the underside (USAF edit), the grade softens it. Canva remove-background + layer design exported as transparent lossless PNG 3200x884 (pro); final = Canva alpha + photo RGB (scripts/alpha_cutout.py: 1 component, no specks, no holes), subject bbox 3005x679. Sticker 1370x370. Checked at 640 px wide over the grid at 1x and 2x: complete, markings (AK, 5450, roundel) identical to the photo. RCAF ALTERNATIVE NOT FOUND: Commons has no PD/CC BY photo of an RCAF F-35A/CF-35A (first two delivered at Luke AFB on 22 Oct 2026); the Luke AFB/AETC photo pages of that arrival (taxiing on the ground) refuse automated access (HTTP 403) and DVIDS search needs a browser. Second choice kept in reserve: the F-35A that took part in the 24 July 2024 intercept itself (DVIDS 8549617, VIRIN 240724-F-D0430-1004, PD, 3/4 view nose LEFT, assets-src/tmp-air/orig/dv_8549617.jpg)."
+}

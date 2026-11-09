@@ -1,0 +1,23 @@
+{
+  "name": "ccg-icebreaker",
+  "files": {
+    "source": "assets-src/photos/ccg-icebreaker.jpg",
+    "cutout": "assets-src/canva/ccg-icebreaker_cutout.png",
+    "final": "assets-src/canva/final/ccg-icebreaker_cutout.png",
+    "public": "public/img/ccg-icebreaker.png"
+  },
+  "title": "CCGS Amundsen.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:CCGS_Amundsen.jpg",
+  "author": "Tatiana Pichugina",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "credit_line": "Photo: Tatiana Pichugina, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/), via Wikimedia Commons. Cut out and color-graded.",
+  "modified": "recortada, cor tratada",
+  "canva": {
+    "source_media_id": "MAHabFxLUq4",
+    "cutout_media_id": "MAHabCOpte4",
+    "design_id": "DAHabF3XR2E"
+  },
+  "prep": "\"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py sticker C:/Users/ELCO/Desktop/CANADA/assets-src/canva/final/ccg-icebreaker_cutout.png C:/Users/ELCO/Desktop/CANADA/public/img/ccg-icebreaker.png --long 1500 --border 11 --sat 0.72 --thin --fill-paper 1500",
+  "notes": "Canadian Coast Guard icebreaker CCGS Amundsen stopped in Arctic sea ice, 3 June 2008 (Flickr P1030361 by Tatiana Pichugina, licence confirmed by FlickreviewR on 12 Aug 2009). Red hull, white superstructure, maple leaf and 'Canada' on the funnel/superstructure, 'AMUNDSEN' on the bow, 'Garde cotiere / Coast Guard' on the hull. 3/4 side view, BOW LEFT, whole ship incl. masts, cranes and the stern gangway (stairs down to the ice, kept as part of the ship). Original 3840x2160 (kept as assets-src/tmp-sea/ice/orig_ccg-icebreaker.jpg) cropped to box 480,150,3305,1900 = 2825x1750, no downscale (the crop leaves out a tracked amphibious vehicle and marker cones on the ice right of the gangway) = photos/ccg-icebreaker.jpg. Canva remove-background + layer design exported as transparent lossless PNG 2825x1750 (pro); the layer design re-typed the hull lettering ('CarieColiere', 'CosaGiardi'), so only its alpha is used: final = Canva alpha + photo RGB (scripts/alpha_cutout.py). Local alpha fix (assets-src/tmp-sea/scripts/sky_key.py, only removes alpha): Canva kept bands of blue sky around masts, whip antennas, wires, crane cables, railings, the mast lattices and the gangway; a colour key against a fitted smooth sky model (Lab distance, ramp 6-18, rows y<1405) was applied only to the thin zone (mask minus its opening r=8, +3 px) and to boxes 840,690,1600,790 / 1300,600,1600,790 / 2420,1140,2825,1405 / 1150,150,1600,700 / 1790,400,1960,935 / 230,790,360,1128 / 2240,900,2560,1215 (no solid walls inside: shadowed white walls are bluish and were protected); partially keyed pixels were colour-unmixed from the sky (no blue fringe). Gaps between masts/railings become paper in the sticker. The hull bottom follows the ice line with a thin ragged rim of snow. Sticker 1574x833. Checked at 800-900 px wide over the grid at 1x and 2x and against the photo: complete, no blue webbing, lettering identical. PD alternatives (USCG/USGS, 2009 joint Healy mission, Louis S. St-Laurent): 'Closing In (4371016246).jpg' (aerial, ship small) and the NOAA 'Canadian helicopter landing on CCG icebreaker CCGS Louis S. St-Laurent' (hazy, date stamp in frame)."
+}

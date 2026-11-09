@@ -1,0 +1,62 @@
+[
+  {
+    "name": "radar_ping",
+    "file": "public/sfx/radar_ping.wav",
+    "freesound_id": "584179",
+    "title": "Radar",
+    "author": "unfa",
+    "url": "https://freesound.org/people/unfa/sounds/584179/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/",
+    "onset_ms": 6
+  },
+  {
+    "name": "sonar_ping",
+    "file": "public/sfx/sonar_ping.wav",
+    "freesound_id": "493162",
+    "title": "Submarine Sonar",
+    "author": "Breviceps",
+    "url": "https://freesound.org/people/Breviceps/sounds/493162/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/",
+    "onset_ms": 74
+  },
+  {
+    "name": "heli_flyby",
+    "file": "public/sfx/heli_flyby.wav",
+    "freesound_id": "534855",
+    "title": "Helicopter Flyby",
+    "author": "m_cel",
+    "url": "https://freesound.org/people/m_cel/sounds/534855/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/",
+    "onset_ms": 947
+  },
+  {
+    "name": "radio_beep",
+    "file": "public/sfx/radio_beep.wav",
+    "freesound_id": "825989",
+    "title": "Police Radio Chirp",
+    "author": "jimmefer",
+    "url": "https://freesound.org/people/jimmefer/sounds/825989/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/",
+    "onset_ms": 21
+  },
+  {
+    "name": "shutter_click",
+    "file": "public/sfx/shutter_click.wav",
+    "freesound_id": "170229",
+    "title": "Camera Shutter",
+    "author": "roachpowder",
+    "url": "https://freesound.org/people/roachpowder/sounds/170229/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/",
+    "onset_ms": 62
+  },
+  {
+    "name": "keyboard_tick",
+    "file": "public/sfx/keyboard_tick.wav",
+    "freesound_id": "570754",
+    "title": "Keyboard - Press down",
+    "author": "Foxfire-",
+    "url": "https://freesound.org/people/Foxfire-/sounds/570754/",
+    "license": "CC0 1.0 (Creative Commons 0) - https://creativecommons.org/publicdomain/zero/1.0/",
+    "onset_ms": 27
+  }
+]

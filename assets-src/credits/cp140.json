@@ -1,0 +1,23 @@
+{
+  "name": "cp140",
+  "files": {
+    "source": "assets-src/photos/cp140.jpg",
+    "cutout": "assets-src/canva/cp140_cutout.png",
+    "final": "assets-src/canva/final/cp140_cutout.png",
+    "public": "public/img/cp140.png"
+  },
+  "title": "EGVA - Lockheed CP-140 - Royal Canadian Air Force - 140112 112 (48388967401).jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:EGVA_-_Lockheed_CP-140_-_Royal_Canadian_Air_Force_-_140112_112_(48388967401).jpg",
+  "author": "Steve Lynes from Sandshurst, United Kingdom",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "modified": "recortada, fios de antena removidos, cor tratada",
+  "credit_line": "Photo: \"EGVA - Lockheed CP-140 - Royal Canadian Air Force - 140112 / 112\" by Steve Lynes from Sandshurst, United Kingdom, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/), via Wikimedia Commons. Cropped, cut out and color-graded.",
+  "canva": {
+    "source_media_id": "MAHabOa7A9I",
+    "cutout_media_id": "MAHabCdhjlU",
+    "design_id": "DAHabHuDsGY"
+  },
+  "prep": "\"C:/Users/ELCO/AppData/Local/Temp/claude/d793bca53d08bd18/5e373615-9e7d-41f1-9a2b-c6737b45acce/scratchpad/whisper-venv/Scripts/python.exe\" -I C:/Users/ELCO/Desktop/CANADA/scripts/prep_images.py sticker C:/Users/ELCO/Desktop/CANADA/assets-src/canva/final/cp140_cutout.png C:/Users/ELCO/Desktop/CANADA/public/img/cp140.png --long 1400 --border 10 --sat 0.72 --thin --fill-paper 60",
+  "notes": "ATTRIBUTION REQUIRED (CC BY 2.0, Flickr original 48388967401 by Steve Lynes). RCAF CP-140M Aurora 140112 (405/407 Sqn grey, 'RCAF ARC' roundel, Canadian flag and '140112' on the fin) in flight at the Royal International Air Tattoo, RAF Fairford, 22 Jul 2019. Left 3/4 view from slightly below, NOSE LEFT, gear up, all four propellers turning (blurred blades), whole aircraft incl. MAD tail boom; plain overcast white sky. No sharp PD/OGL photo of a CP-140 in flight exists on Commons (the PD RIMPAC 2024 frames are 1000 px landing/taxi shots; the CC BY 2.0 USCG Op Nanook 2021 fly-by over Nuuk is motion-blurred), so this CC BY photo was used. Original 5524x3779 (kept as assets-src/tmp-air/orig/cp140_riat.jpg) cropped to box 150,1050,5450,2600 and downscaled to 3200x936 (PIL Lanczos, JPEG q95) = photos/cp140.jpg. Canva remove-background + layer design exported as transparent lossless PNG 3200x936 (pro); final = Canva alpha + photo RGB (scripts/alpha_cutout.py: 1 component, 488 hole px filled). LOCAL FIX: Canva kept the two HF antenna wires (wing to fin top) as 6-10 px bands of light sky, which read as white webbing; they were removed with assets-src/tmp-air/scripts/remove_thin.py (opening, kernel 13 px, box 1770,95,2412,428, pad 48) plus erase_poly.py on the wire junction at the fin leading edge (polygon 2350,128 2418,128 2397,167 2350,167); the pre-fix file is assets-src/tmp-air/cp140_final_before_wirefix.png. Two tiny wire-attachment knobs remain on the wing trailing edge (real parts, a few px). The blurred propeller blades are light grey (sky shows through the blur) and merge into the paper border as lobes; that is the photo, not a cut error. Subject bbox 3004x784. Sticker 1471x437. Checked at 640 px wide over the grid at 1x and 2x: complete, no webbing, markings identical to the photo. In P2S19 it sits on the LEFT facing left while p8 faces right (they point away from each other); do not mirror either sticker (lettering). Verification pass 3: sticker re-made with --fill-paper 60, which only closes a 50 px pinhole in the paper between the blurred blades of the inner left propeller (sticker px ~476,109; it showed as a dark slot) and a 1 px thin spot near the lower-left propeller; the cutout itself is unchanged."
+}

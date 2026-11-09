@@ -106,3 +106,31 @@ export const cues: Cue[] = [
     `COMP=CanadaPart1 node scripts/stills.mjs p1s05 0.5 <frames>` (frame = round(seconds × 30)). Look at every key
     beat plus one frame in each transition (cut ± 3 frames). At most ~6 frames per call; the PC is weak, so one render
     at a time.
+11. **Dashed lines that draw:** `draw()` uses DrawSVG, which OVERWRITES `strokeDasharray`, so a dashed path drawn
+    with `draw()` turns solid. For a dashed line that draws itself use `DashedDraw` from `components/Bits.tsx`
+    (`<DashedDraw id="p2s04-r1" d={...} dash={[px(10), px(7)]} />`, then `draw(tl, q, '.p2s04-r1-rev', ...)`).
+    `MovingTrack` handles its own dashes. Plain `draw()` is for solid strokes only.
+12. **SVG vs HTML entrances:** SVG elements (`Icon`, `<g>`, `<circle>`) enter with `popSvg()`; HTML badges
+    (`IconBadge`, `IconHtml`) with `popIn(tl, q, cls, at)` (pops the disc and draws the icon); text with
+    `wipeText()`/`riseLine()`; stickers with `slideIn()`/`pop()`.
+13. **Contrast:** never red on red. A red line or icon over red Canada/Russia disappears. Over red areas use chalk
+    (`C.ink`) with a dark outline (`color={C.black} fill={C.ink}` for silhouettes); keep red for the one thing the
+    narration is about. A red arrow reads as a military movement in these videos: only use one when it is.
+14. **Things that only exist while moving** (missile/aircraft heads on a `MovingTrack`) must be hidden before they
+    start and after they arrive: `head={p > 0.002 && p < 0.995}`. A head at progress 0 sits at its origin as a
+    stray mark on screen.
+15. **Sizes that read at 1080p:** map icons `size={px(48..84)}` (screen-constant), stroke widths `px(2..5)`,
+    `IconBadge` 110-220, labels >= 28 px. Thin glyphs (a font "≠", a thin check) vanish: use `NotEqual` from
+    `components/Bits.tsx` and a red disc with a chalk check (see `CheckDisc` in P1S11).
+16. **Text never clipped:** when a title block has to make room, slide or fade it out; do not shrink it into the top
+    edge. Check every label at every key frame against the camera move (labels from `toScreen` move with the map).
+17. **SFX files must exist** in `public/sfx` (a missing file fails the render). Current names: bear_growl boom drone
+    ice_crack jet_flyby marker_swipe moose_call paper_slide paper_slide2 paper_unfold pen_scribble pop pop2 riser
+    ship_horn snow_steps stamp tick whoosh_big whoosh_soft whoosh_soft2 wind_arctic radar_ping (1.0 s) sonar_ping (2.6 s)
+    radio_beep (0.25 s) shutter_click (0.29 s) keyboard_tick (0.2 s) heli_flyby (4.0 s).
+18. **Never mount GSAP-animated elements later in the scene.** `useGsapTimeline` builds the timeline ONCE, when the
+    scene mounts; an element rendered later (`{t > x ? <Badge cls=…/> : null}`) is not in the timeline, so in the
+    real (sequential) render it pops in fully visible with no entrance, while single-frame stills look right. Keep
+    every animated element mounted for the whole scene and hide whole blocks with `opacity` on a wrapper (not
+    `display: none`, which breaks SVG bounding boxes; not `visibility`, which children can override). A block that is
+    mounted at the start and unmounted later is fine.
