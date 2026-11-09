@@ -27,8 +27,9 @@ export const SCENES = {
   s19: [270.2, 282.09],
   s20: [282.09, 302.8],
   s21: [302.8, 317.83],
-  s22: [317.83, 337.86],
-  s23: [337.86, 352.12],
-  s24: [352.12, 378.32],
-  s25: [378.32, 390.5],
+  s22: [317.83, 352.12],
+  s23: [352.12, 390.5],
 } as const;
+
+/** Tempos de palavra SO dentro da cena (palavras comuns se repetem na narracao): const T = TS('s05'). */
+export const TS = (k: keyof typeof SCENES) => T.within(SCENES[k]);

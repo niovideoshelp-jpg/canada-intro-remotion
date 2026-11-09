@@ -11,6 +11,9 @@ map (anchor #1) without fake UI. The narrator's like/subscribe line plays over t
 ---
 
 ## F01: Allies who disagree (0.00 → 6.83)
+
+> **One file:** F01, F02 and F03 are one continuous scene in `F01.tsx` (0.00 → 23.42); the camera carries every
+> transition, including the whip to Vancouver/Ottawa and back.
 > "The United States and Canada work together to defend the continent, but they disagree over the Northwest
 > Passage."
 
@@ -22,7 +25,7 @@ map (anchor #1) without fake UI. The narrator's like/subscribe line plays over t
   (`CA2.nwpRoutes`) draw in ink dashes, with the label **`NORTHWEST PASSAGE`** (MarkerLabel).
 - SFX: whoosh_soft on the push.
 
-## F02: Ottawa says internal waters, and the joke (6.83 → 15.52)
+## F02: Ottawa says internal waters, and the joke (6.83 → 15.52) (inside `F01.tsx`)
 > "Ottawa considers its various routes to be Canadian internal waters. And yes, Ottawa is Canada's capital, in case you
 > were thinking Vancouver."
 
@@ -35,7 +38,7 @@ map (anchor #1) without fake UI. The narrator's like/subscribe line plays over t
   on "capital", VANCOUVER ✕ on "Vancouver".
 - SFX: whoosh_soft (whip), pop (Ottawa), a light pop2 with the ✕.
 
-## F03: Washington says international strait (15.52 → 23.42)
+## F03: Washington says international strait (15.52 → 23.42) (inside `F01.tsx`)
 > "Washington, meanwhile, considers those waters a strait used for international navigation, with a right of transit
 > for ships from other countries."
 
@@ -100,23 +103,27 @@ A `Balance` scale, **`CANADA`** on the left pan and **`UNITED STATES`** on the r
   the US paints red again ("binational").
 - `T('decades')`: a slim `Timeline` 1958 → 2026 under it. **`1958`** is NORAD's founding and supports "for decades".
 
-## F08: My answer is no (66.86 → 73.86)
-> "Now, in a prolonged war against a major power with no outside help? My answer is no."
+## F08: My answer is no (66.86 → 81.87)
+> "Now, in a prolonged war against a major power with no outside help? My answer is no. Based on the capabilities
+> we've looked at, I don't see Canada having enough in place today to sustain the defense of that entire region on
+> its own."
+
+(The cut was moved to the end of "...on its own." so the NO stays on screen while the narrator explains it.)
 
 The strongest beat of the episode. Hold back motion before it.
 - `T('prolonged')`/`T('war')`: polar map. **Russia (major power) is red** and its strike arcs (Part 1) faintly return.
 - `T('outside')`/`T('help')`: the US paint drains away and the NORAD stitch line breaks. Canada is alone in red.
 - ~0.3 s of near-stillness after "help?" (the narrator pauses 71.70 → 71.88). Lower the SFX.
-- `T('no')` (the word "no." near 73.3): a huge red **`NO`** stamp (Anton ~360 px, slight rotation) lands centre with the
+- `T('no', 2)` (the word "no." at 73.40): a huge red **`NO`** stamp (Anton ~360 px, slight rotation) lands centre with the
   stamp SFX plus a low boom (vol 0.24).
+- `T('capabilities')`: the NO lifts to the upper third and shrinks. The Canadian Arctic gets outlined in red chalk
+  ("that entire region"). A `StatBar` **`IN PLACE TODAY`** fills only part-way against a target tick `NEEDED`.
+  No numbers.
 
-## F09: Why, the four weights (73.86 → 89.47)
-> "Based on the capabilities we've looked at, I don't see Canada having enough in place today to sustain the defense
-> of that entire region on its own. The distances involved, equipment availability, and shortages in personnel and
-> infrastructure all weigh heavily in that assessment."
+## F09: Why, the four weights (81.87 → 89.47)
+> "The distances involved, equipment availability, and shortages in personnel and infrastructure all weigh heavily in
+> that assessment."
 
-- `T('capabilities')`: CA map of the whole Arctic region outlined in red chalk ("that entire region"). A `StatBar`
-  **`IN PLACE TODAY`** fills only part-way against a target tick `NEEDED`. No numbers.
 - `T('distances')`, `T('equipment')`, `T('personnel')`, `T('infrastructure')`: a `Balance` (or four weights) where four
   Anton weight blocks drop onto one pan, one per word: **`DISTANCES`**, **`EQUIPMENT`**, **`PERSONNEL`**,
   **`INFRASTRUCTURE`**. The pan sinks with each ("weigh heavily").

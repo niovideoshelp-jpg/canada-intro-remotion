@@ -7,11 +7,11 @@ const VIDEOS = [
   {
     dir: 'part1', comp: 'Part1', prefix: 'P1S', audio: 'part1.mp3', transcript: '1', duration: 192.0,
     scenes: [
-      [0, 17.59, 'The intercept'], [17.59, 39.39, 'NORAD'], [39.39, 50.61, 'Equipment and partnership'],
-      [50.61, 57.44, 'Equipment and support network'], [57.44, 68.25, '162,000 km of coast'], [68.25, 80.3, 'Sustainment'],
-      [80.3, 89.95, 'People of the north'], [89.95, 101.97, 'National security, dual use'], [101.97, 112.98, 'Warming Arctic'],
-      [112.98, 125.2, 'Geography matters'], [125.2, 141.11, 'Two assessments'], [141.11, 157.56, 'Strike without invasion'],
-      [157.56, 172.84, 'Espionage and dual-use ships'], [172.84, 192.0, 'Different jobs'],
+      [0, 39.39, 'The intercept and NORAD', 'P1S01'], [39.39, 50.61, 'Equipment and partnership', 'P1S03'],
+      [50.61, 57.44, 'Equipment and support network', 'P1S04'], [57.44, 68.25, '162,000 km of coast', 'P1S05'], [68.25, 80.3, 'Sustainment', 'P1S06'],
+      [80.3, 89.95, 'People of the north', 'P1S07'], [89.95, 101.97, 'National security, dual use', 'P1S08'], [101.97, 112.98, 'Warming Arctic', 'P1S09'],
+      [112.98, 125.2, 'Geography matters', 'P1S10'], [125.2, 141.11, 'Two assessments', 'P1S11'], [141.11, 157.56, 'Strike without invasion', 'P1S12'],
+      [157.56, 172.84, 'Espionage and dual-use ships', 'P1S13'], [172.84, 192.0, 'Different jobs', 'P1S14'],
     ],
   },
   {
@@ -24,17 +24,16 @@ const VIDEOS = [
       [165.86, 182.13, 'What one ship can do'], [182.13, 203.15, 'Limits'], [203.15, 221.61, 'Coast Guard'],
       [221.61, 238.93, 'Victoria class'], [238.93, 247.27, 'Open water vs under ice'], [247.27, 270.2, '12 submarines'],
       [270.2, 282.09, 'Aurora to Poseidon'], [282.09, 302.8, 'Alert and Rangers'], [302.8, 317.83, 'Terrain and Nanook'],
-      [317.83, 337.86, 'Nanisivik'], [337.86, 352.12, 'Range instead of a base'], [352.12, 378.32, 'Hubs and NORAD package'],
-      [378.32, 390.5, 'Closer to where they operate'],
+      [317.83, 352.12, 'Nanisivik and the alternative', 'P2S22'], [352.12, 390.5, 'Hubs, NORAD package, forces north', 'P2S24'],
     ],
   },
   {
     dir: 'final', comp: 'Final', prefix: 'F', audio: 'final.mp3', transcript: 'Final', duration: 105.0,
     scenes: [
-      [0, 6.83, 'Allies who disagree'], [6.83, 15.52, 'Internal waters, Ottawa'], [15.52, 23.42, 'International strait'],
-      [23.42, 36.78, '1988 agreement'], [36.78, 46.25, 'Independence is leverage'], [46.25, 59.48, 'Back to the question'],
-      [59.48, 66.86, 'Depends on the threat'], [66.86, 73.86, 'My answer is no'], [73.86, 89.47, 'The four weights'],
-      [89.47, 96.08, 'Years away'], [96.08, 105.0, 'Outro'],
+      [0, 23.42, 'Northwest Passage dispute', 'F01'],
+      [23.42, 36.78, '1988 agreement', 'F04'], [36.78, 46.25, 'Independence is leverage', 'F05'], [46.25, 59.48, 'Back to the question', 'F06'],
+      [59.48, 66.86, 'Depends on the threat', 'F07'], [66.86, 81.87, 'My answer is no', 'F08'], [81.87, 89.47, 'The four weights', 'F09'],
+      [89.47, 96.08, 'Years away', 'F10'], [96.08, 105.0, 'Outro', 'F11'],
     ],
   },
 ];
@@ -48,7 +47,7 @@ for (const v of VIDEOS) {
   const words = tr.segments.flatMap((s) => s.words.map((w) => ({w: w.w, s: w.s, e: w.e})));
   fs.writeFileSync(path.join(base, 'words.json'), JSON.stringify(words) + '\n');
 
-  const ids = v.scenes.map((_, i) => `${v.prefix}${pad(i + 1)}`);
+  const ids = v.scenes.map((sc, i) => sc[3] ?? `${v.prefix}${pad(i + 1)}`);
   const keys = v.scenes.map((_, i) => `s${pad(i + 1)}`);
 
   fs.writeFileSync(
@@ -63,6 +62,9 @@ export const T = makeT(words as Word[]);
 export const SCENES = {
 ${v.scenes.map(([a, b], i) => `  ${keys[i]}: [${a}, ${b}],`).join('\n')}
 } as const;
+
+/** Tempos de palavra SO dentro da cena (palavras comuns se repetem na narracao): const T = TS('s05'). */
+export const TS = (k: keyof typeof SCENES) => T.within(SCENES[k]);
 `,
   );
 

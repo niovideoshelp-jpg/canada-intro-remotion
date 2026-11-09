@@ -32,9 +32,7 @@ import {P2S19} from './scenes/P2S19';
 import {P2S20} from './scenes/P2S20';
 import {P2S21} from './scenes/P2S21';
 import {P2S22} from './scenes/P2S22';
-import {P2S23} from './scenes/P2S23';
 import {P2S24} from './scenes/P2S24';
-import {P2S25} from './scenes/P2S25';
 
 export const Part2: React.FC = () => (
   <AbsoluteFill style={{backgroundColor: '#1c1c1b'}}>
@@ -102,17 +100,11 @@ export const Part2: React.FC = () => (
     <Scene range={SCENES.s21} name="P2S21 Terrain and Nanook">
       <P2S21 />
     </Scene>
-    <Scene range={SCENES.s22} name="P2S22 Nanisivik">
+    <Scene range={SCENES.s22} name="P2S22 Nanisivik and the alternative">
       <P2S22 />
     </Scene>
-    <Scene range={SCENES.s23} name="P2S23 Range instead of a base">
-      <P2S23 />
-    </Scene>
-    <Scene range={SCENES.s24} name="P2S24 Hubs and NORAD package">
+    <Scene range={SCENES.s23} last name="P2S24 Hubs, NORAD package, forces north">
       <P2S24 />
-    </Scene>
-    <Scene range={SCENES.s25} last name="P2S25 Closer to where they operate">
-      <P2S25 />
     </Scene>
     <WipeEdges cuts={cutsOf(SCENES)} />
     <ScreenFX />

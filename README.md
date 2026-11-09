@@ -1,7 +1,17 @@
-# Canada — Intro (NIO500)
+# Canada — Intro, Parte 1, Parte 2 e Final (NIO500)
 
 Documentário animado estilo Vox, editado em **Remotion** e renderizado **na nuvem (GitHub Actions)**.
-Narração: `public/audio/intro.mp3` (56 s). Vídeo final: 1920×1080, 30 fps, 57,5 s.
+Todos em 1920×1080, 30 fps:
+
+| Vídeo | Composição | Narração | Duração |
+|---|---|---|---|
+| Intro | `CanadaIntro` | `public/audio/intro.mp3` | 57,5 s |
+| Parte 1 | `CanadaPart1` | `public/audio/part1.mp3` | 3:12 |
+| Parte 2 | `CanadaPart2` | `public/audio/part2.mp3` | 6:30 |
+| Final | `CanadaFinal` | `public/audio/final.mp3` | 1:45 |
+
+Roteiro visual cena a cena: `docs/storyboard-part1.md`, `docs/storyboard-part2.md`, `docs/storyboard-final.md`
+(regras gerais em `docs/bible.md`, como montar uma cena em `docs/scenes-howto.md`).
 
 ## Como funciona
 
@@ -17,9 +27,10 @@ Narração: `public/audio/intro.mp3` (56 s). Vídeo final: 1920×1080, 30 fps, 5
 
 ## Renderizar na nuvem
 
-- **Automático:** todo `git push` na branch `main` que altere o vídeo dispara o render.
-- **Manual:** GitHub → *Actions* → *Render video* → *Run workflow* (campo opcional `frames`, ex. `0-300`, para um teste rápido).
-- O MP4 fica em *Actions* → execução → **Artifacts** → `canada-intro`.
+- **Automático:** todo `git push` na branch `main` que altere os vídeos dispara o render dos quatro, em paralelo.
+- **Manual:** GitHub → *Actions* → *Render video* → *Run workflow* → escolha o vídeo (`todos`, `intro`, `part1`,
+  `part2`, `final`); o campo opcional `frames` (ex. `0-300`) faz um teste rápido.
+- Cada MP4 fica em *Actions* → execução → **Artifacts** → `canada-intro`, `canada-part1`, `canada-part2`, `canada-final`.
 
 ## Editar localmente
 
@@ -27,12 +38,14 @@ Narração: `public/audio/intro.mp3` (56 s). Vídeo final: 1920×1080, 30 fps, 5
 npm install
 npm run studio        # pré-visualização no navegador
 npm run typecheck
-node scripts/stills.mjs teste 0.5 30 300 900   # renderiza quadros soltos em out/stills
+node scripts/stills.mjs teste 0.5 30 300 900   # renderiza quadros soltos da Intro em out/stills
+COMP=CanadaPart1 node scripts/stills.mjs p1 0.5 300 900   # idem para outro vídeo
 ```
 
-- Tempos da narração (palavra por palavra): `src/timing.ts`
-- Cenas: `src/scenes/S01…S11`
-- Efeitos sonoros e volumes: `src/sfx.ts`
+- Intro: tempos em `src/timing.ts`, cenas em `src/scenes/S01…S11`, efeitos em `src/sfx.ts`
+- Partes 1, 2 e Final: `src/videos/<video>/` — `timing.ts` (cortes + `T('palavra')` com o tempo de cada
+  palavra da narração), `scenes/` (uma cena por arquivo, cada uma com seus efeitos sonoros) e `Main.tsx`
+- Componentes compartilhados das partes novas: `src/components/kit/`; dados de mapa: `src/data/maps2.ts`
 - Curvatura da tela: variáveis `CRT_K1` (padrão 0.045) e `CRT_CA` (padrão 0.004) no `scripts/crt-post.mjs`
 
 ## Imagens (recortes do Canva → `public/img`)

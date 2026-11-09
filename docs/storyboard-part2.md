@@ -278,6 +278,8 @@ CA map. The **northern approaches** (Beaufort, Davis Strait/Labrador Sea) are ou
   one per word.
 
 ## P2S22: Nanisivik (317.83 → 337.86)
+
+> **One file:** P2S22 and P2S23 are one continuous scene in `P2S22.tsx` (317.83 → 352.12) on the same map.
 > "The difficulty of sustaining these operations is clear at Nanisivik, the naval facility on northern Baffin Island.
 > In May 2026, the Defense Department announced that it was taking the site out of operational use. Its very short
 > seasonal operating window, construction problems, delays and expensive dock repairs had reduced its usefulness."
@@ -288,7 +290,7 @@ CA map. The **northern approaches** (Beaufort, Davis Strait/Labrador Sea) are ou
 - `T('window')`: a 12-month strip with only a sliver (late summer) open in red. `T('construction')`, `T('delays')`,
   `T('repairs')`: three `IconBadge`s (crane, clock, money).
 
-## P2S23: Range instead of a base (337.86 → 352.12)
+## P2S23: Range instead of a base (337.86 → 352.12) (inside `P2S22.tsx`)
 > "The government said the range of the Harry DeWolf-class ships, together with other refueling options, would allow
 > operations to continue without any loss of capability. Even so, the case shows how an Arctic construction project can
 > fall short of expectations."
@@ -298,6 +300,8 @@ CA map. The **northern approaches** (Beaufort, Davis Strait/Labrador Sea) are ou
 - `T('expectations')`: two `StatBar`s, **`EXPECTED`** (full) vs **`DELIVERED`** (short).
 
 ## P2S24: Hubs and the NORAD infrastructure package (352.12 → 378.32)
+
+> **One file:** P2S24 and P2S25 are one continuous scene in `P2S24.tsx` (352.12 → 390.50) on the same map.
 > "Canada is also planning a network of support hubs in the north, with investment projected at 2.67 billion Canadian
 > dollars between 2024 and 2044. In March 2026, the government also announced a package worth 32 billion Canadian
 > dollars for NORAD-related infrastructure in Yellowknife, Inuvik, Iqaluit, and Goose Bay. That includes runways,
@@ -310,7 +314,7 @@ CA map. The **northern approaches** (Beaufort, Davis Strait/Labrador Sea) are ou
 - `T('runways')`, `T('hangars')`, `T('fuel')`, `T('ammunition')`: icons (runway, hangar, fuel, ammo) pop in a row under
   the map, one per word.
 
-## P2S25: Closer to where they operate (378.32 → 390.50 end)
+## P2S25: Closer to where they operate (378.32 → 390.50 end) (inside `P2S24.tsx`)
 > "As those projects are completed, the goal is to bring forces into the region and support longer missions, with
 > maintenance, storage, and medical care closer to where personnel need to operate."
 

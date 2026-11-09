@@ -1,0 +1,25 @@
+// Kit compartilhado das Partes 1, 2 e Final (ver README.md nesta pasta). Helpers GSAP em src/lib/tl2.ts.
+export {ICONS, ICON_NAMES, Icon, IconHtml, IconPrims, iconView} from './Icon';
+export type {IconName, IconStyle, IconView} from './Icon';
+export {IconBadge} from './IconBadge';
+export {Stamp} from './Stamp';
+export {Counter} from './Counter';
+export {DocCard} from './DocCard';
+export {Timeline, yearX} from './Timeline';
+export type {TimelineBand, TimelineMark} from './Timeline';
+export {Checklist} from './Checklist';
+export type {CheckMark} from './Checklist';
+export {PictogramGrid, gridCellCenter} from './PictogramGrid';
+export type {CellState} from './PictogramGrid';
+export {Dimension} from './Dimension';
+export {Callout} from './Callout';
+export {Pulse, RangeRing} from './RangeRing';
+export {RadarSweep, sweepAngle} from './RadarSweep';
+export {MovingTrack, trackHead, trackPoly} from './MovingTrack';
+export {Balance} from './Balance';
+export {StatBar} from './StatBar';
+export {SplitPanel, splitCenters} from './SplitPanel';
+export {LABEL_SHADOW, SvgLayer, SvgText, countAt, hash01, stepsAt, txOf} from './common';
+export type {Anchor} from './common';
+export {annularSectorD, bearingPt, circleD, cumLen, handCircleD, headingAt, pointAt, polyD, sampleD, sliceTo, smoothD, smoothPts, starD} from './geom';
+export type {XY} from './geom';

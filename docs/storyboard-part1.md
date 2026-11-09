@@ -11,6 +11,9 @@ and finally "different jobs need different sensors, forces and partners", which 
 ---
 
 ## P1S01: The intercept (0.00 → 17.59)
+
+> **One file, one continuous scene:** P1S01 and P1S02 are implemented together in `P1S01.tsx` (0.00 → 39.39) with no
+> curtain between them; the polar camera carries the transition.
 > "On July 24th, 2024, Canadian and American fighter jets intercepted two Russian Tu-95 bombers and two Chinese H-6
 > bombers in Alaska's air defense identification zone. All four remained in international airspace. None entered
 > Canadian or U.S. airspace."
@@ -41,7 +44,7 @@ whose camera moves from wide to the Bering Sea.
 - SFX: stamp on the date; whoosh_soft on the camera push; jet_flyby (vol 0.22) as the jets launch; radar_ping low
   when the ADIZ closes.
 
-## P1S02: NORAD (17.59 → 39.39)
+## P1S02: NORAD (17.59 → 39.39) (inside `P1S01.tsx`)
 > "The operation was carried out by NORAD, the North American Aerospace Defense Command, which brings the United
 > States and Canada together under a bi-national command. NORAD itself said the activity wasn't considered a threat.
 > Even so, the aircraft were tracked and intercepted. It was a practical example of how the two countries work
