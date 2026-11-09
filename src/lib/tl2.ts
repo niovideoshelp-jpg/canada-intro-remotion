@@ -81,12 +81,12 @@ export const counterIn = (tl: TL, q: Q, cls: string, at: number) => {
 };
 
 /** DocCard: o papel desliza para dentro, o titulo aparece e as linhas cinza se "digitam". */
-export const docIn = (tl: TL, q: Q, cls: string, at: number, fromX = -760) => {
+export const docIn = (tl: TL, q: Q, cls: string, at: number, fromX = -760, hlAt?: number) => {
   slideIn(tl, q, `.${cls}`, at, fromX, 0, 0.7);
   wipeText(tl, q, `.${cls}-ttl`, at + 0.3, 0.45);
   const lines = q(`.${cls}-ln`);
   if (lines.length) tl.fromTo(lines, {scaleX: 0, transformOrigin: '0% 50%'}, {scaleX: 1, duration: 0.22, ease: 'power2.out', stagger: 0.035}, at + 0.4);
-  fadeIn(tl, q, `.${cls}-hl-base`, at + 0.55, 0.3);
+  fadeIn(tl, q, `.${cls}-hl-base`, hlAt ?? at + 0.55, 0.3);
 };
 
 /** DocCard: cada linha destacada recebe a passada do marcador vermelho (uma depois da outra, +0.28 s). */

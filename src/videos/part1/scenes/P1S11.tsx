@@ -46,13 +46,13 @@ export const P1S11: React.FC = () => {
   const cam = camAt(t, KEYS);
 
   const scope = useGsapTimeline<HTMLDivElement>(({timeline: tl, selector: q}) => {
-    docIn(tl, q, 'p1s11-doc', L(T('documents') - 0.35), -900);
+    docIn(tl, q, 'p1s11-doc', L(T('documents') - 0.35), -900, L(T('immediate') - 0.3));
     stampIn(tl, q, 'p1s11-date', L(T('june') - STAMP_HIT + 0.1));
     docHighlight(tl, q, 'p1s11-doc', L(T('immediate') - 0.25));
     paint(tl, q, 'p1s11-ru', RU_SEEDS, L(T('russia') - 0.1), 0.8);
     marker(tl, q, 'p1s11-main', L(T('main') - 0.1));
-    popIn(tl, q, 'p1s11-ck1', L(T('both') - 0.05));
-    popIn(tl, q, 'p1s11-ck2', L(T('true') - 0.1));
+    popIn(tl, q, 'p1s11-ck1', L(T('those') - 0.05));
+    popIn(tl, q, 'p1s11-ck2', L(T('assessments') + 0.05));
   });
 
   // o documento vai para a esquerda quando a Russia entra; o mapa so ganha forca depois
@@ -102,6 +102,6 @@ export const cues: Cue[] = [
   {at: T('immediate') - 0.3, file: 'marker_swipe', vol: 0.2, dur: 0.6},
   {at: T('russia') - 0.1, file: 'boom', vol: 0.14, dur: 2.2, fadeOut: 0.8},
   {at: T('main') - 0.17, file: 'marker_swipe', vol: 0.18, dur: 0.6},
-  {at: T('both') - 0.05 - 0.004, file: 'pop', vol: 0.18, dur: 0.3},
-  {at: T('true') - 0.1 - 0.004, file: 'pop', vol: 0.18, dur: 0.3},
+  {at: T('those') - 0.05 - 0.004, file: 'pop', vol: 0.18, dur: 0.3},
+  {at: T('assessments') + 0.05 - 0.004, file: 'pop', vol: 0.18, dur: 0.3},
 ];

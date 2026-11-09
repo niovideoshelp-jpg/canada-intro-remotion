@@ -140,7 +140,7 @@ const Ships: React.FC = () => {
 };
 
 export const cues: Cue[] = [
-  {at: T('sea') - 0.4, file: 'ship_horn', vol: 0.08, dur: 2.0, fadeIn: 0.2, fadeOut: 0.8},
+  {at: T('sea') - 0.4, file: 'ship_horn', vol: 0.05, dur: 2.0, fadeIn: 0.2, fadeOut: 0.8}, // (pico do audio da Parte 2 era aqui)
   {at: T('six') - 0.15, file: 'pop', vol: 0.14, dur: 0.3},
   {at: T('harry') - 0.1, file: 'marker_swipe', vol: 0.14, dur: 0.6},
   {at: T('october') - 0.008, file: 'stamp', vol: 0.26, dur: 0.6},

@@ -53,8 +53,8 @@ const KEYS: CamKey[] = [
   {t: 112.7, x: 960, y: 560, s: 1.2, r: -4},
   {t: 116.5, x: 960, y: 560, s: 1.24, r: -4, ease: inOutSine},
   {t: 121.6, x: CAN[0], y: CAN[1] - 30, s: 2.3, r: -10, ease: inOutCubic}, // "the Canadian Arctic"
-  {t: 123.4, x: EUR[0] - 20, y: EUR[1] + 20, s: 2.3, r: 4, ease: inOutCubic}, // "Northern Europe"
-  {t: 125.5, x: MID[0], y: MID[1] + 10, s: 1.5, r: -3, ease: inOutCubic}, // os dois lados
+  {t: 123.0, x: EUR[0] - 20, y: EUR[1] + 20, s: 2.3, r: 4, ease: inOutCubic}, // "Northern Europe"
+  {t: 124.2, x: MID[0], y: MID[1] - 10, s: 1.45, r: -3, ease: inOutCubic}, // os dois lados
 ];
 
 export const P1S10: React.FC = () => {

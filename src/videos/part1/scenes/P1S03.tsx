@@ -54,7 +54,7 @@ export const P1S03: React.FC = () => {
   const cam = camAt(t, KEYS);
 
   const scope = useGsapTimeline<HTMLDivElement>(({timeline: tl, selector: q}) => {
-    slideIn(tl, q, '.p1s03-ship', L(T('patrol') - 0.35), -1100, 0, 0.8);
+    slideIn(tl, q, '.p1s03-ship', L(T('canada') - 0.15), -1100, 0, 0.8);
     popIn(tl, q, 'p1s03-radar', L(T('monitor') - 0.1));
     pop(tl, q, '.p1s03-troops', L(T('military') - 0.15), 2);
     // "but": as tres saem para baixo e o mapa fica sozinho

@@ -9,7 +9,7 @@ import {useGsapTimeline} from '@remotion/gsap';
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {HandArrow} from '../../../components/Bits';
-import {DocCard, Icon, IconBadge} from '../../../components/kit';
+import {DocCard, Icon, IconBadge, Stamp} from '../../../components/kit';
 import {Sticker} from '../../../components/Sticker';
 import {ANTON} from '../../../fonts';
 import '../../../gsap';
@@ -18,7 +18,7 @@ import {inOutCubic, inOutSine, lerp, ramp} from '../../../lib/ease';
 import {at} from '../../../lib/pos';
 import {useGlobalSec, useLocal} from '../../../lib/scene';
 import {draw, fadeIn, slideIn, wipeText} from '../../../lib/tl';
-import {docIn, popIn, popSvg} from '../../../lib/tl2';
+import {docIn, popIn, popSvg, STAMP_HIT, stampIn} from '../../../lib/tl2';
 import {C} from '../../../theme';
 import {TS} from '../timing';
 
@@ -55,6 +55,7 @@ export const P1S13: React.FC = () => {
     wipeText(tl, q, '.p1s13-mil', L(T('military') - 0.05), 0.4);
     // fase B
     slideIn(tl, q, '.p1s13-jidi', L(T('chinese') - 0.35), 1500, 0, 0.85);
+    stampIn(tl, q, 'p1s13-cn', L(T('ships') - STAMP_HIT));
     draw(tl, q, '.p1s13-sea', L(T('chinese') - 0.1), 0.9, 'power2.out');
     fadeIn(tl, q, '.p1s13-water', L(T('chinese') - 0.1), 0.8);
     draw(tl, q, '.p1s13-floor', L(T('collect') - 0.15), 1.0, 'power1.inOut');
@@ -85,7 +86,7 @@ export const P1S13: React.FC = () => {
         <AbsoluteFill style={{opacity: aOut}}>
           <div style={{position: 'absolute', inset: 0, transform: `translate(${lerp(560, 0, shift) + lerp(0, -760, up)}px, 0px) rotate(0.03deg)`}}>
             <DocCard cls="p1s13-doc" x={400} y={530} w={430} rot={-4} title="Canada's Arctic Foreign Policy" lines={10} seed={5} />
-            <IconBadge cls="p1s13-warn" x={585} y={300} icon="warning" size={118} ring="red" iconColor={C.red} />
+            <IconBadge cls="p1s13-warn" x={650} y={215} icon="warning" size={118} ring="red" iconColor={C.red} />
           </div>
           <div style={{position: 'absolute', inset: 0, transformOrigin: `1230px ${ROW_Y}px`, transform: `translate(${lerp(0, -270, up)}px, ${lerp(0, -300, up)}px) scale(${lerp(1, 0.62, up)}) rotate(0.03deg)`}}>
             {BADGES.map((b) => (
@@ -114,6 +115,7 @@ export const P1S13: React.FC = () => {
       <div style={{position: 'absolute', inset: 0, transform: `translate(0px, ${bob}px) rotate(0.03deg)`}}>
         <Sticker cls="p1s13-jidi" src="img/china-research-ship.png" x={SHIP.x} y={SHIP.y} w={SHIP.w} />
       </div>
+      <Stamp cls="p1s13-cn" x={1560} y={120} text="China" size={72} />
       <IconBadge cls="p1s13-res" x={330} y={700} icon="magnifier" size={150} label="Research" labelSize={42} />
       <IconBadge cls="p1s13-mil2" x={1590} y={700} icon="submarine" size={150} ring="red" iconColor={C.red} label="Military" labelSize={42} labelColor={C.red} />
     </AbsoluteFill>
@@ -175,7 +177,8 @@ export const cues: Cue[] = [
   {at: T('platforms') - 0.4, file: 'whoosh_soft', vol: 0.14, dur: 1.0},
   {at: T('military') - 0.3, file: 'marker_swipe', vol: 0.18, dur: 0.6},
   {at: T('chinese') - 0.4, file: 'whoosh_soft2', vol: 0.18, dur: 1.0},
-  {at: T('chinese') + 0.2, file: 'ship_horn', vol: 0.07, dur: 2.2, fadeIn: 0.3, fadeOut: 1.0},
+  {at: T('chinese') + 0.2, file: 'ship_horn', vol: 0.05, dur: 2.2, fadeIn: 0.3, fadeOut: 1.0},
+  {at: T('ships') - 0.008, file: 'stamp', vol: 0.22, dur: 0.6},
   {at: T('collect') - 0.15, file: 'pen_scribble', vol: 0.08, dur: 1.0, fadeOut: 0.3},
   {at: T('collect') - 0.1, file: 'sonar_ping', vol: 0.13, dur: 2.6},
   {at: T('collect') + 2.4, file: 'sonar_ping', vol: 0.09, dur: 2.0, fadeOut: 0.6},

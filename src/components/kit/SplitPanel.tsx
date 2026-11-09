@@ -34,12 +34,12 @@ export const SplitPanel: React.FC<{
         {left}
         {tintLeft > 0 ? <AbsoluteFill style={{backgroundColor: C.black, opacity: tintLeft}} /> : null}
       </AbsoluteFill>
-      {progress > 0 ? (
+      {/* sempre montado: com progress 0 o recorte fica todo fora da tela */}
         <AbsoluteFill style={{clipPath: `polygon(${top}px 0px, ${W + 400}px 0px, ${W + 400}px ${H}px, ${bottom}px ${H}px)`}}>
           {right}
           {tintRight > 0 ? <AbsoluteFill style={{backgroundColor: C.black, opacity: tintRight}} /> : null}
         </AbsoluteFill>
-      ) : null}
+      
       {edge && progress > 0 ? (
         <svg width={W} height={H} style={{position: 'absolute', inset: 0, pointerEvents: 'none'}}>
           <line x1={top + 9} y1={-10} x2={bottom + 9} y2={H + 10} stroke={C.shadow} strokeOpacity={0.65} strokeWidth={14} />

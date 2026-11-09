@@ -97,7 +97,7 @@ export const P1S01: React.FC = () => {
     wipeText(tl, q, '.p1s01-adiz-lbl', L(T('identification') - 0.1), 0.6);
     wipeText(tl, q, '.p1s01-l-ak', L(T('alaskas') + 0.1), 0.4);
     // o rotulo da ADIZ cumpriu o papel: sai antes do 'international airspace' ocupar o mesmo lado
-    tl.to(q('.p1s01-adiz-lbl'), {autoAlpha: 0, duration: 0.4, ease: 'power1.in'}, L(T('all') - 0.3));
+    tl.to(q('.p1s01-adiz-lbl'), {autoAlpha: 0, duration: 0.4, ease: 'power1.in'}, L(T('international') - 0.3));
     wipeText(tl, q, '.p1s01-intl', L(T('international') - 0.2), 0.45);
     draw(tl, q, '.p1s01-coast', L(T('none') - 0.05), 1.2, 'power1.inOut');
     // NORAD
@@ -106,11 +106,11 @@ export const P1S01: React.FC = () => {
     marker(tl, q, 'p1s01-norad', L(T('norad') - 0.05));
     wipeText(tl, q, '.p1s01-full', L(T('north') - 0.05), 1.3);
     paint(tl, q, 'p1s01-na', NA_SEEDS, L(T('united') - 0.1), 0.8);
-    marker(tl, q, 'p1s01-threat', L(T('considered') - 0.1));
-    tl.to(q('.p1s01-full'), {autoAlpha: 0, duration: 0.35, ease: 'power1.in'}, L(T('considered') - 0.35));
+    marker(tl, q, 'p1s01-threat', L(T('wasnt') - 0.1));
+    tl.to(q('.p1s01-full'), {autoAlpha: 0, duration: 0.35, ease: 'power1.in'}, L(T('wasnt') - 0.35));
     // "tracked": o radar varre o Alasca
     fadeIn(tl, q, '.p1s01-radar', L(T('tracked') - 0.6), 0.4);
-    tl.to(q('.p1s01-norad-bar, .p1s01-norad-txt, .p1s01-threat-bar, .p1s01-threat-txt'), {autoAlpha: 0, duration: 0.35}, L(T('even') - 0.1));
+    tl.to(q('.p1s01-norad-bar, .p1s01-norad-txt, .p1s01-threat-bar, .p1s01-threat-txt'), {autoAlpha: 0, duration: 0.35}, L(T('so') + 0.3));
     tl.to(q('.p1s01-radar'), {autoAlpha: 0, duration: 0.4}, L(T('practical') - 0.1));
     tl.to(q('.p1s01-l-tu, .p1s01-l-h6'), {autoAlpha: 0, duration: 0.4}, L(T('practical') - 0.1));
     // vigilancia sobre o Artico
@@ -166,8 +166,8 @@ export const P1S01: React.FC = () => {
       </MapSvg>
 
       {/* rotulos que acompanham o mapa */}
-      <MapLabel cls="p1s01-l-tu" x={tuX + 44} y={tuY - 46} text="Tu-95" size={40} color={C.red} anchor="left" />
-      <MapLabel cls="p1s01-l-h6" x={h6X + 44} y={h6Y + 40} text="H-6" size={40} color={C.red} anchor="left" />
+      <MapLabel cls="p1s01-l-tu" x={tuX + 44} y={tuY - 46} text="Tu-95" size={44} color={C.ink} anchor="left" />
+      <MapLabel cls="p1s01-l-h6" x={h6X + 44} y={h6Y + 40} text="H-6" size={44} color={C.ink} anchor="left" />
       <MapLabel cls="p1s01-l-ak" x={akX + 60} y={akY + 70} text="Alaska" size={46} color={C.ink} />
       <div style={at(ix, iy)}>
         <div className="p1s01-intl" style={{fontFamily: ANTON, fontSize: 34, color: C.ink, letterSpacing: '0.12em', textTransform: 'uppercase', textAlign: 'center', lineHeight: 1.1, textShadow: '0 2px 10px rgba(0,0,0,0.7)'}}>
@@ -202,7 +202,7 @@ const Overlays: React.FC<{pb: number; pj: number; jetsOn: boolean}> = ({pb, pj, 
   return (
     <g>
       <DashedDraw id="p1s01-adiz" d={POLAR2.adiz} color={C.ink} opacity={0.8} width={2.6} dash={[px(12), px(8)]} />
-      <text className="p1s01-adiz-lbl" fontFamily={ANTON} fontSize={px(17)} letterSpacing={px(2.2)} fill={C.inkSoft}>
+      <text className="p1s01-adiz-lbl" fontFamily={ANTON} fontSize={px(24)} letterSpacing={px(2.6)} fill={C.inkSoft}>
         <textPath href="#p1s01-adiz-path" startOffset="50%" textAnchor="middle" dominantBaseline="middle">
           AIR DEFENSE IDENTIFICATION ZONE
         </textPath>

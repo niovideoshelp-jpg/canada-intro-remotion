@@ -67,9 +67,9 @@ export const P1S04: React.FC = () => {
   const cam = camAt(t, KEYS);
 
   const scope = useGsapTimeline<HTMLDivElement>(({timeline: tl, selector: q}) => {
-    pop(tl, q, '.p1s04-jet', L(T('canadians') - 0.1), -4);
-    pop(tl, q, '.p1s04-ship', L(T('can') + 0.05), 2);
-    pop(tl, q, '.p1s04-troops', L(T('do') + 0.05), -2);
+    pop(tl, q, '.p1s04-jet', L(50.45), -4); // ja na cortina
+    pop(tl, q, '.p1s04-ship', L(T('understand') + 0.1), 2);
+    pop(tl, q, '.p1s04-troops', L(T('canadians') - 0.05), -2);
     marker(tl, q, 'p1s04-eq', L(T('equipment') - 0.05));
     HUBS.forEach((_, i) => popSvg(tl, q, `.p1s04-h${i}`, L(T('support') - 0.2 + i * 0.04)));
     LINKS.forEach((_, i) => draw(tl, q, `.p1s04-k${i}`, L(T('network') - 0.15 + i * 0.05), 0.5, 'power1.inOut'));
@@ -89,7 +89,7 @@ export const P1S04: React.FC = () => {
             <div style={{position: 'absolute', inset: 0, transform: `translate(${leftX - 480}px, 0px) rotate(0.03deg)`}}>
               <Sticker cls="p1s04-jet" src="img/cf18.png" x={470} y={330} w={560} />
               <Sticker cls="p1s04-ship" src="img/dewolf.png" x={500} y={600} w={620} />
-              <Sticker cls="p1s04-troops" src="img/soldiers.png" x={450} y={840} w={250} />
+              <Sticker cls="p1s04-troops" src="img/soldiers.png" x={470} y={870} w={340} />
               <MarkerLabel cls="p1s04-eq" x={480} y={140} text="Equipment" size={64} />
             </div>
           </AbsoluteFill>

@@ -63,11 +63,11 @@ export const P1S09: React.FC = () => {
     draw(tl, q, '.p1s09-tp-rev', L(T('access') + 0.25), 1.2, 'power1.inOut');
     draw(tl, q, '.p1s09-nwp-rev', L(T('changing') - 0.3), 1.2, 'power1.inOut');
     CHOKES.forEach((_, i) => popSvg(tl, q, `.p1s09-x${i}`, L(T('every') - 0.2 + i * 0.18), 0, 0.36));
-    tl.fromTo(q('.p1s09-cal'), {autoAlpha: 0, y: 20}, {autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out'}, L(T('open') - 0.3));
+    tl.fromTo(q('.p1s09-cal'), {autoAlpha: 0, y: 20}, {autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out'}, L(T('less') - 0.1));
   });
 
   const shrink = ramp(t, T('access') - 0.2, T('evenly') - 0.1, inOutSine);
-  const calHi = ramp(t, T('all') - 0.3, T('year'), inOutSine);
+  const calHi = ramp(t, T('route') - 0.2, T('open') + 0.1, inOutSine);
 
   return (
     <AbsoluteFill ref={scope}>
@@ -89,7 +89,7 @@ export const P1S09: React.FC = () => {
       </MapSvg>
       {/* a temporada: so um pedaco do ano */}
       <div style={at(960, 975)}>
-        <div className="p1s09-cal" style={{display: 'flex', gap: 10, fontFamily: ANTON, fontSize: 34, textShadow: '0 2px 8px rgba(0,0,0,0.6)'}}>
+        <div className="p1s09-cal" style={{display: 'flex', gap: 10, fontFamily: ANTON, fontSize: 34, textShadow: '0 2px 8px rgba(0,0,0,0.6)', backgroundColor: 'rgba(14,14,13,0.92)', padding: '12px 16px', borderRadius: 8}}>
           {MONTHS.map((m, i) => {
             const open = i === 7 || i === 8;
             return (
@@ -127,7 +127,8 @@ const Routes: React.FC = () => {
       <DashedDraw id="p1s09-nwp" d={r.nwp.d} color={C.red} width={3} dash={[px(10), px(7)]} />
       {CHOKES.map(([x, y], i) => (
         <g key={i} className={`p1s09-x${i}`}>
-          <Icon name="cross" x={x} y={y} size={px(40)} color={C.red} strokeW={5} />
+          <circle cx={x} cy={y} r={px(24)} fill={C.black} stroke={C.ink} strokeWidth={px(2)} />
+          <Icon name="cross" x={x} y={y} size={px(34)} color={C.red} strokeW={6} />
         </g>
       ))}
     </g>
